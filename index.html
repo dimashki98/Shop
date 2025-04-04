@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ar" dir="rtl">
+<!DOCTYPE html><html lang="tr" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +26,7 @@
     }
     .logo img {
       height: 50px;
-      margin-left: 10px;
+      margin-right: 10px;
     }
     .lang-switch {
       background-color: #ffb6c1;
@@ -37,9 +37,9 @@
       font-weight: bold;
     }
     .container {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 40px auto;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.95);
       padding: 20px;
       border-radius: 12px;
     }
@@ -47,21 +47,36 @@
       text-align: center;
       color: #d6336c;
     }
-    form {
-      display: flex;
-      flex-direction: column;
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
     }
-    input {
-      margin: 10px 0;
+    .product {
+      background-color: #fff0f5;
       padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    button {
+    .product img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .product h3 {
+      margin: 10px 0 5px;
+      font-size: 1.1em;
+      color: #c2185b;
+    }
+    .product p {
+      color: #444;
+      margin-bottom: 10px;
+    }
+    .product button {
       background-color: #d6336c;
       color: white;
       border: none;
-      padding: 10px;
+      padding: 8px 12px;
       border-radius: 6px;
       cursor: pointer;
     }
@@ -79,43 +94,56 @@
       <img src="https://up6.cc/2025/04/17437769751751.jpg" alt="Maryam Shop Logo">
       <h1>Maryam Shop</h1>
     </div>
-    <button class="lang-switch" onclick="switchLanguage()">Türkçe</button>
+    <button class="lang-switch" onclick="switchLanguage()">العربية</button>
   </header>  <div class="container">
-    <h2 id="form-title">تسجيل حساب جديد</h2>
-    <form>
-      <input type="text" placeholder="الاسم الكامل" id="name">
-      <input type="email" placeholder="البريد الإلكتروني" id="email">
-      <input type="tel" placeholder="رقم الجوال" id="phone">
-      <input type="password" placeholder="كلمة المرور" id="password">
-      <button type="submit">تسجيل</button>
-    </form>
+    <h2 id="product-title">Yeni Ürünler</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://via.placeholder.com/200x250/ffc0cb/000000?text=Elbise+1" alt="Ürün 1">
+        <h3>Çiçekli Elbise</h3>
+        <p>₺299.99</p>
+        <button>Sepete Ekle</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200x250/ffb6c1/000000?text=Elbise+2" alt="Ürün 2">
+        <h3>Gül Desenli Tunik</h3>
+        <p>₺199.99</p>
+        <button>Sepete Ekle</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200x250/ffcce0/000000?text=Çanta" alt="Ürün 3">
+        <h3>Pembe Çanta</h3>
+        <p>₺149.99</p>
+        <button>Sepete Ekle</button>
+      </div>
+    </div>
   </div>  <footer>
-    تواصل معنا عبر واتساب: <strong>+90 531 629 87 11</strong>
+    Bize Ulaşın (WhatsApp): <strong>+90 531 629 87 11</strong>
   </footer>  <script>
-    let currentLang = 'ar';
+    let currentLang = 'tr';
     function switchLanguage() {
-      if (currentLang === 'ar') {
-        document.documentElement.lang = 'tr';
-        document.documentElement.dir = 'ltr';
-        document.getElementById('form-title').innerText = 'Yeni Hesap Oluştur';
-        document.querySelectorAll('input')[0].placeholder = 'Ad Soyad';
-        document.querySelectorAll('input')[1].placeholder = 'E-posta';
-        document.querySelectorAll('input')[2].placeholder = 'Telefon';
-        document.querySelectorAll('input')[3].placeholder = 'Şifre';
-        document.querySelector('button[type="submit"]').innerText = 'Kaydol';
-        document.querySelector('.lang-switch').innerText = 'العربية';
-        currentLang = 'tr';
-      } else {
+      if (currentLang === 'tr') {
         document.documentElement.lang = 'ar';
         document.documentElement.dir = 'rtl';
-        document.getElementById('form-title').innerText = 'تسجيل حساب جديد';
-        document.querySelectorAll('input')[0].placeholder = 'الاسم الكامل';
-        document.querySelectorAll('input')[1].placeholder = 'البريد الإلكتروني';
-        document.querySelectorAll('input')[2].placeholder = 'رقم الجوال';
-        document.querySelectorAll('input')[3].placeholder = 'كلمة المرور';
-        document.querySelector('button[type="submit"]').innerText = 'تسجيل';
+        document.getElementById('product-title').innerText = 'منتجات جديدة';
+        document.querySelectorAll('.product h3')[0].innerText = 'فستان مزهر';
+        document.querySelectorAll('.product h3')[1].innerText = 'تونيك بنقشة ورد';
+        document.querySelectorAll('.product h3')[2].innerText = 'حقيبة وردية';
+        document.querySelectorAll('.product button').forEach(btn => btn.innerText = 'أضف إلى السلة');
         document.querySelector('.lang-switch').innerText = 'Türkçe';
+        document.querySelector('footer').innerHTML = 'تواصل معنا (واتساب): <strong>+90 531 629 87 11</strong>';
         currentLang = 'ar';
+      } else {
+        document.documentElement.lang = 'tr';
+        document.documentElement.dir = 'ltr';
+        document.getElementById('product-title').innerText = 'Yeni Ürünler';
+        document.querySelectorAll('.product h3')[0].innerText = 'Çiçekli Elbise';
+        document.querySelectorAll('.product h3')[1].innerText = 'Gül Desenli Tunik';
+        document.querySelectorAll('.product h3')[2].innerText = 'Pembe Çanta';
+        document.querySelectorAll('.product button').forEach(btn => btn.innerText = 'Sepete Ekle');
+        document.querySelector('.lang-switch').innerText = 'العربية';
+        document.querySelector('footer').innerHTML = 'Bize Ulaşın (WhatsApp): <strong>+90 531 629 87 11</strong>';
+        currentLang = 'tr';
       }
     }
   </script></body>

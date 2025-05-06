@@ -1,0 +1,2602 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CARLIFT الإمارات - خدمة توصيل سريعة وآمنة لجميع المناطق في الإمارات. أرخص الأسعار وأحدث السيارات.">
+  <meta name="keywords" content="كارلفت الإمارات, توصيل سريع, خدمة كارلفت, توصيل سيارات, أرخص كارلفت, دبي, أبوظبي, الشارقة, عجمان, الفجيرة, رأس الخيمة, حجز سيارات 4 راكب, حجز سيارات 7 راكب, حجز سيارات 11 راكب">
+  <meta name="author" content="CARLIFT الإمارات">
+  <title>CARLIFT الإمارات - خدمة توصيل سريعة وموثوقة</title>
+  
+  <!-- Google Fonts - Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --gold: #d4af37;
+      --gold-light: #e5c158;
+      --gold-dark: #b3941f;
+      --black: #000000;
+      --gray-900: #111111;
+      --gray-800: #1f1f1f;
+      --gray-700: #2e2e2e;
+      --gray-600: #444444;
+      --white: #ffffff;
+      --transition-fast: 0.3s;
+      --transition-medium: 0.5s;
+      --transition-slow: 0.8s;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(to bottom, var(--black), var(--gray-900));
+      color: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .text-gold {
+      color: var(--gold);
+    }
+
+    .bg-gold {
+      background-color: var(--gold);
+    }
+
+    .border-gold {
+      border-color: var(--gold);
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .justify-between {
+      justify-content: space-between;
+    }
+
+    .gap-2 {
+      gap: 0.5rem;
+    }
+
+    .gap-3 {
+      gap: 0.75rem;
+    }
+
+    .gap-4 {
+      gap: 1rem;
+    }
+
+    .gap-6 {
+      gap: 1.5rem;
+    }
+
+    .gap-8 {
+      gap: 2rem;
+    }
+
+    .mb-2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+
+    .mb-6 {
+      margin-bottom: 1.5rem;
+    }
+
+    .mb-8 {
+      margin-bottom: 2rem;
+    }
+
+    .mb-12 {
+      margin-bottom: 3rem;
+    }
+
+    .mb-16 {
+      margin-bottom: 4rem;
+    }
+
+    .mt-2 {
+      margin-top: 0.5rem;
+    }
+
+    .mt-4 {
+      margin-top: 1rem;
+    }
+
+    .mt-6 {
+      margin-top: 1.5rem;
+    }
+
+    .mt-8 {
+      margin-top: 2rem;
+    }
+
+    .mt-12 {
+      margin-top: 3rem;
+    }
+
+    .mt-16 {
+      margin-top: 4rem;
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .py-4 {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .py-8 {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .py-12 {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .py-16 {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    .py-20 {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    .px-2 {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .px-8 {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .p-2 {
+      padding: 0.5rem;
+    }
+
+    .p-3 {
+      padding: 0.75rem;
+    }
+
+    .p-4 {
+      padding: 1rem;
+    }
+
+    .p-6 {
+      padding: 1.5rem;
+    }
+
+    .p-8 {
+      padding: 2rem;
+    }
+
+    .rounded-full {
+      border-radius: 9999px;
+    }
+
+    .rounded-xl {
+      border-radius: 0.75rem;
+    }
+
+    .rounded-lg {
+      border-radius: 0.5rem;
+    }
+
+    .rounded-md {
+      border-radius: 0.375rem;
+    }
+
+    .font-bold {
+      font-weight: 700;
+    }
+
+    .font-semibold {
+      font-weight: 600;
+    }
+
+    .font-medium {
+      font-weight: 500;
+    }
+
+    .text-sm {
+      font-size: 0.875rem;
+    }
+
+    .text-base {
+      font-size: 1rem;
+    }
+
+    .text-lg {
+      font-size: 1.125rem;
+    }
+
+    .text-xl {
+      font-size: 1.25rem;
+    }
+
+    .text-2xl {
+      font-size: 1.5rem;
+    }
+
+    .text-3xl {
+      font-size: 1.875rem;
+    }
+
+    .text-4xl {
+      font-size: 2.25rem;
+    }
+
+    .text-5xl {
+      font-size: 3rem;
+    }
+
+    .text-6xl {
+      font-size: 3.75rem;
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .absolute {
+      position: absolute;
+    }
+
+    .fixed {
+      position: fixed;
+    }
+
+    .inset-0 {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .top-0 {
+      top: 0;
+    }
+
+    .left-0 {
+      left: 0;
+    }
+
+    .right-0 {
+      right: 0;
+    }
+
+    .bottom-0 {
+      bottom: 0;
+    }
+
+    .z-10 {
+      z-index: 10;
+    }
+
+    .z-20 {
+      z-index: 20;
+    }
+
+    .z-30 {
+      z-index: 30;
+    }
+
+    .z-40 {
+      z-index: 40;
+    }
+
+    .z-50 {
+      z-index: 50;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .block {
+      display: block;
+    }
+
+    .inline-block {
+      display: inline-block;
+    }
+
+    .grid {
+      display: grid;
+    }
+
+    .grid-cols-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .w-full {
+      width: 100%;
+    }
+
+    .h-full {
+      height: 100%;
+    }
+
+    .h-screen {
+      height: 100vh;
+    }
+
+    .object-cover {
+      object-fit: cover;
+    }
+
+    .object-contain {
+      object-fit: contain;
+    }
+
+    .overflow-hidden {
+      overflow: hidden;
+    }
+
+    .transition {
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+
+    .transition-all {
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+
+    .duration-300 {
+      transition-duration: 300ms;
+    }
+
+    .duration-500 {
+      transition-duration: 500ms;
+    }
+
+    .duration-1000 {
+      transition-duration: 1000ms;
+    }
+
+    .ease-in-out {
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .shadow-lg {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .shadow-xl {
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .shadow-gold {
+      box-shadow: 0 4px 14px 0 rgba(212, 175, 55, 0.39);
+    }
+
+    .border {
+      border-width: 1px;
+      border-style: solid;
+    }
+
+    .border-t {
+      border-top-width: 1px;
+      border-top-style: solid;
+    }
+
+    .border-b {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+    }
+
+    .border-gray-800 {
+      border-color: var(--gray-800);
+    }
+
+    .opacity-0 {
+      opacity: 0;
+    }
+
+    .opacity-100 {
+      opacity: 1;
+    }
+
+    .opacity-50 {
+      opacity: 0.5;
+    }
+
+    .opacity-70 {
+      opacity: 0.7;
+    }
+
+    .opacity-80 {
+      opacity: 0.8;
+    }
+
+    .backdrop-blur-md {
+      backdrop-filter: blur(12px);
+    }
+
+    .bg-black {
+      background-color: var(--black);
+    }
+
+    .bg-gray-900 {
+      background-color: var(--gray-900);
+    }
+
+    .bg-gray-800 {
+      background-color: var(--gray-800);
+    }
+
+    .bg-white {
+      background-color: var(--white);
+    }
+
+    .bg-black\/60 {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .bg-black\/80 {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .bg-black\/90 {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .bg-gold\/20 {
+      background-color: rgba(212, 175, 55, 0.2);
+    }
+
+    .bg-gold\/10 {
+      background-color: rgba(212, 175, 55, 0.1);
+    }
+
+    .bg-gray-900\/50 {
+      background-color: rgba(17, 17, 17, 0.5);
+    }
+
+    .bg-gradient-to-r {
+      background-image: linear-gradient(to right, var(--tw-gradient-stops));
+    }
+
+    .bg-gradient-to-b {
+      background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+    }
+
+    .bg-gradient-to-br {
+      background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+    }
+
+    .from-gold {
+      --tw-gradient-stops: var(--gold), var(--tw-gradient-to, rgba(212, 175, 55, 0));
+    }
+
+    .to-amber-500 {
+      --tw-gradient-to: #f59e0b;
+    }
+
+    .from-black {
+      --tw-gradient-stops: var(--black), var(--tw-gradient-to, rgba(0, 0, 0, 0));
+    }
+
+    .to-gray-900 {
+      --tw-gradient-to: var(--gray-900);
+    }
+
+    .from-gray-900 {
+      --tw-gradient-stops: var(--gray-900), var(--tw-gradient-to, rgba(17, 17, 17, 0));
+    }
+
+    .to-black {
+      --tw-gradient-to: var(--black);
+    }
+
+    .from-gold\/20 {
+      --tw-gradient-stops: rgba(212, 175, 55, 0.2), var(--tw-gradient-to, rgba(212, 175, 55, 0));
+    }
+
+    .to-gold\/10 {
+      --tw-gradient-to: rgba(212, 175, 55, 0.1);
+    }
+
+    .cursor-pointer {
+      cursor: pointer;
+    }
+
+    .select-none {
+      user-select: none;
+    }
+
+    /* Header Styles */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      transition: all var(--transition-fast);
+      padding: 1rem 0;
+    }
+
+    .header.scrolled {
+      background-color: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(12px);
+      padding: 0.5rem 0;
+      box-shadow: 0 4px 6px rgba(212, 175, 55, 0.1);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.8);
+      transition: color var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .header-buttons {
+      display: none;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      font-weight: 600;
+      transition: all var(--transition-fast);
+      cursor: pointer;
+    }
+
+    .btn-sm {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.875rem;
+    }
+
+    .btn-lg {
+      padding: 0.75rem 1.5rem;
+      font-size: 1.125rem;
+    }
+
+    .btn-primary {
+      background-image: linear-gradient(to right, var(--gold), #f59e0b);
+      color: var(--black);
+    }
+
+    .btn-primary:hover {
+      background-image: linear-gradient(to right, #f59e0b, var(--gold));
+    }
+
+    .btn-outline {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      background-color: transparent;
+    }
+
+    .btn-outline:hover {
+      background-color: var(--gold);
+      color: var(--black);
+    }
+
+    .mobile-menu-btn {
+      display: block;
+      background: none;
+      border: none;
+      color: var(--white);
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
+    .mobile-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(12px);
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(212, 175, 55, 0.1);
+      display: none;
+    }
+
+    .mobile-menu.active {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--gray-800);
+      color: rgba(255, 255, 255, 0.8);
+      transition: color var(--transition-fast);
+    }
+
+    .mobile-menu a:hover {
+      color: var(--gold);
+    }
+
+    .mobile-menu-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      transition: opacity var(--transition-medium);
+      opacity: 0;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+    }
+
+    .hero-slide-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 10;
+    }
+
+    .hero-slide-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 20;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 1rem;
+      padding-top: 4rem;
+    }
+
+    .hero-logo {
+      margin-bottom: 1.5rem;
+      animation: fadeInDown 0.8s ease;
+    }
+
+    .hero-logo img {
+      width: 120px;
+      height: auto;
+    }
+
+    .hero-title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      animation: fadeInDown 0.8s ease 0.2s both;
+    }
+
+    .hero-subtitle {
+      margin-bottom: 2rem;
+      animation: fadeInDown 0.8s ease 0.4s both;
+    }
+
+    .hero-subtitle h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-subtitle p {
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      animation: fadeInUp 0.8s ease 0.6s both;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: fadeIn 0.8s ease 1s both, bounce 2s infinite;
+    }
+
+    .hero-scroll svg {
+      width: 2rem;
+      height: 2rem;
+      color: var(--gold);
+    }
+
+    /* Services Section */
+    .services {
+      padding: 5rem 1rem;
+      background-image: linear-gradient(to bottom, var(--black), var(--gray-900));
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-title h2 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .section-title p {
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 36rem;
+      margin: 0 auto;
+      font-size: 1.125rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+    }
+
+    .service-card {
+      background-color: rgba(17, 17, 17, 0.5);
+      border: 1px solid var(--gray-800);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      transition: all var(--transition-fast);
+      height: 100%;
+    }
+
+    .service-card:hover {
+      border-color: rgba(212, 175, 55, 0.5);
+    }
+
+    .service-icon {
+      margin-bottom: 1rem;
+    }
+
+    .service-icon svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      color: var(--gold);
+    }
+
+    .service-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-description {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1rem;
+    }
+
+    .cities-list {
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    .cities-list h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .cities-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      max-width: 48rem;
+      margin: 0 auto;
+    }
+
+    .city-tag {
+      background-color: var(--gray-800);
+      color: var(--white);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      transition: all var(--transition-fast);
+    }
+
+    .city-tag:hover {
+      border-color: var(--gold);
+      background-color: var(--black);
+    }
+
+    /* Car Gallery */
+    .car-gallery {
+      padding: 5rem 1rem;
+      background-image: linear-gradient(to bottom, var(--gray-900), var(--black));
+    }
+
+    .car-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .car-tabs-container {
+      display: inline-flex;
+      background-color: var(--gray-900);
+      border-radius: 9999px;
+      padding: 0.25rem;
+    }
+
+    .car-tab {
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      transition: all var(--transition-fast);
+      background: none;
+      border: none;
+      color: var(--white);
+      cursor: pointer;
+    }
+
+    .car-tab.active {
+      background-color: var(--gold);
+      color: var(--black);
+      font-weight: 500;
+    }
+
+    .car-tab:not(.active):hover {
+      color: var(--gold);
+    }
+
+    .car-info {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .car-info h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .car-info p {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .car-capacity {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.75rem;
+      color: var(--gold);
+    }
+
+    .car-capacity svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-right: 0.5rem;
+    }
+
+    .car-images {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .car-image-container {
+      position: relative;
+      height: 16rem;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .car-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-medium);
+    }
+
+    .car-image-container:hover .car-image {
+      transform: scale(1.1);
+    }
+
+    .car-image-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      transition: background-color var(--transition-fast);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+    }
+
+    .car-image-container:hover .car-image-overlay {
+      background-color: rgba(0, 0, 0, 0.1);
+      opacity: 1;
+    }
+
+    .car-image-button {
+      background-color: rgba(212, 175, 55, 0.9);
+      color: var(--black);
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+    }
+
+    .car-features {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .car-features h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .car-features-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem;
+      max-width: 64rem;
+      margin: 0 auto;
+    }
+
+    .car-feature {
+      background-color: rgba(17, 17, 17, 0.5);
+      border: 1px solid var(--gray-800);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      transition: all var(--transition-fast);
+    }
+
+    .car-feature:hover {
+      border-color: rgba(212, 175, 55, 0.5);
+    }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 5rem 1rem;
+      background-image: linear-gradient(to bottom, var(--black), var(--gray-900));
+    }
+
+    .testimonials-slider {
+      position: relative;
+      max-width: 64rem;
+      margin: 0 auto;
+    }
+
+    .testimonials-container {
+      overflow: hidden;
+    }
+
+    .testimonials-track {
+      display: flex;
+      transition: transform var(--transition-medium) ease-in-out;
+    }
+
+    .testimonial-slide {
+      width: 100%;
+      flex-shrink: 0;
+      padding: 0 1rem;
+    }
+
+    .testimonial-card {
+      background-color: rgba(17, 17, 17, 0.5);
+      border: 1px solid var(--gray-800);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      transition: all var(--transition-fast);
+    }
+
+    .testimonial-card:hover {
+      border-color: rgba(212, 175, 55, 0.5);
+    }
+
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;175,55,0.5);
+    }
+
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-avatar {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background-color: rgba(212, 175, 55, 0.2);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.25rem;
+      border: 2px solid var(--gold);
+      margin-right: 1rem;
+    }
+
+    .testimonial-info {
+      flex: 1;
+    }
+
+    .testimonial-name {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .testimonial-location {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .testimonial-rating {
+      display: flex;
+      margin-left: auto;
+    }
+
+    .testimonial-rating svg {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    .star-filled {
+      color: var(--gold);
+      fill: var(--gold);
+    }
+
+    .star-empty {
+      color: var(--gray-600);
+    }
+
+    .testimonial-text {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.125rem;
+      line-height: 1.6;
+    }
+
+    .testimonial-nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      color: var(--white);
+      border: none;
+      border-radius: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      z-index: 10;
+    }
+
+    .testimonial-nav-button:hover {
+      background-color: var(--gold);
+      color: var(--black);
+    }
+
+    .testimonial-prev {
+      right: -1rem;
+    }
+
+    .testimonial-next {
+      left: -1rem;
+    }
+
+    .testimonial-dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .testimonial-dot {
+      width: 0.75rem;
+      height: 0.75rem;
+      margin: 0 0.25rem;
+      border-radius: 50%;
+      background-color: var(--gray-600);
+      border: none;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .testimonial-dot.active {
+      background-color: var(--gold);
+      width: 1.5rem;
+      border-radius: 9999px;
+    }
+
+    .testimonial-dot:not(.active):hover {
+      background-color: rgba(212, 175, 55, 0.5);
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 5rem 1rem;
+      background-image: linear-gradient(to bottom, var(--gray-900), var(--black));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-decoration {
+      position: absolute;
+      border-radius: 50%;
+      background-color: rgba(212, 175, 55, 0.05);
+      filter: blur(3rem);
+    }
+
+    .contact-decoration-1 {
+      top: 0;
+      left: 0;
+      width: 16rem;
+      height: 16rem;
+    }
+
+    .contact-decoration-2 {
+      bottom: 0;
+      right: 0;
+      width: 24rem;
+      height: 24rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .contact-info-card {
+      background-color: rgba(17, 17, 17, 0.5);
+      border: 1px solid var(--gray-800);
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+
+    .contact-info-content {
+      background-image: linear-gradient(to right, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
+      padding: 2rem;
+    }
+
+    .contact-info-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-info-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .contact-info-icon {
+      background-color: rgba(212, 175, 55, 0.2);
+      padding: 0.75rem;
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+
+    .contact-info-icon svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: var(--gold);
+    }
+
+    .contact-info-text h4 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-info-text p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.125rem;
+    }
+
+    .contact-booking {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-image: linear-gradient(to bottom right, var(--black), var(--gray-900));
+      padding: 2rem;
+      border-radius: 0.75rem;
+      border: 1px solid var(--gray-800);
+    }
+
+    .contact-booking-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .contact-booking-text {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      max-width: 32rem;
+    }
+
+    .contact-booking-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      max-width: 32rem;
+    }
+
+    .contact-qr {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .contact-qr-text {
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-qr-code {
+      background-color: var(--white);
+      padding: 0.75rem;
+      border-radius: 0.75rem;
+      display: inline-block;
+    }
+
+    .contact-qr-code img {
+      width: 10rem;
+      height: 10rem;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--black);
+      color: var(--white);
+      padding: 4rem 1rem 2rem;
+      border-top: 1px solid var(--gray-800);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-logo img {
+      height: 3.5rem;
+      width: auto;
+    }
+
+    .footer-logo-text {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .footer-description {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-social {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .footer-social-link {
+      background-color: var(--gray-800);
+      color: var(--white);
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-fast);
+    }
+
+    .footer-social-link:hover {
+      background-color: var(--gold);
+      color: var(--black);
+    }
+
+    .footer-social-link svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    .footer-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-link {
+      color: rgba(255, 255, 255, 0.7);
+      transition: color var(--transition-fast);
+    }
+
+    .footer-link:hover {
+      color: var(--gold);
+    }
+
+    .footer-cities {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap-y: 0.75rem;
+    }
+
+    .footer-city {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--gray-800);
+      padding-top: 2rem;
+      text-align: center;
+    }
+
+    .footer-copyright {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.875rem;
+    }
+
+    /* Modal */
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 1rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--transition-fast), visibility var(--transition-fast);
+    }
+
+    .modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      position: relative;
+      max-width: 64rem;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.95);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 0.75rem;
+    }
+
+    .modal-image-container {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+    }
+
+    .modal-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: -1rem;
+      right: -1rem;
+      background-color: var(--black);
+      color: var(--white);
+      border: 1px solid var(--gray-800);
+      border-radius: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      z-index: 10;
+    }
+
+    .modal-close:hover {
+      background-color: var(--gold);
+      color: var(--black);
+      border-color: var(--gold);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+      }
+      40% {
+        transform: translateY(-20px) translateX(-50%);
+      }
+      60% {
+        transform: translateY(-10px) translateX(-50%);
+      }
+    }
+
+    /* Responsive Styles */
+    @media (min-width: 640px) {
+      .hero-buttons {
+        flex-direction: row;
+      }
+
+      .car-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-booking-buttons {
+        flex-direction: row;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .text-4xl {
+        font-size: 2.5rem;
+      }
+
+      .hero-title {
+        font-size: 3rem;
+      }
+
+      .hero-subtitle h2 {
+        font-size: 1.875rem;
+      }
+
+      .section-title h2 {
+        font-size: 2.5rem;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .car-images {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .car-features-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .testimonial-prev {
+        right: -1.5rem;
+      }
+
+      .testimonial-next {
+        left: -1.5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .header-buttons {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .mobile-menu-btn {
+        display: none;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--gray-900);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--gold-dark);
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--gold);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="flex items-center justify-between">
+        <a href="#" class="logo">
+          <img src="https://up6.cc/2025/05/174656540848771.png" alt="شعار كارلفت" />
+          <span class="text-xl font-bold text-white hidden md:inline-block">
+            <span class="text-gold">CAR</span>LIFT الإمارات
+          </span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#services">خدماتنا</a>
+          <a href="#cars">سياراتنا</a>
+          <a href="#testimonials">آراء العملاء</a>
+          <a href="#contact">تواصل معنا</a>
+        </nav>
+
+        <div class="header-buttons">
+          <a href="tel:+971561627014" class="btn btn-outline btn-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            +971 56 162 7014
+          </a>
+          <a href="https://wa.me/971561627014" target="_blank" class="btn btn-primary btn-sm">
+            احجز الآن
+          </a>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <nav>
+        <a href="#services">خدماتنا</a>
+        <a href="#cars">سياراتنا</a>
+        <a href="#testimonials">آراء العملاء</a>
+        <a href="#contact">تواصل معنا</a>
+      </nav>
+      <div class="mobile-menu-buttons">
+        <a href="tel:+971561627014" class="btn btn-outline btn-sm w-full">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          +971 56 162 7014
+        </a>
+        <a href="https://wa.me/971561627014" target="_blank" class="btn btn-primary btn-sm w-full">
+          احجز الآن
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <!-- Slide 1 -->
+    <div class="hero-slide active" id="hero-slide-0">
+      <div class="hero-slide-overlay"></div>
+      <img src="https://up6.cc/2025/05/174656555341133.jpg" alt="خدمة توصيل فاخرة" class="hero-slide-img" />
+    </div>
+    
+    <!-- Slide 2 -->
+    <div class="hero-slide" id="hero-slide-1">
+      <div class="hero-slide-overlay"></div>
+      <img src="https://up6.cc/2025/05/174656555340222.jpg" alt="سيارات حديثة ومريحة" class="hero-slide-img" />
+    </div>
+    
+    <!-- Slide 3 -->
+    <div class="hero-slide" id="hero-slide-2">
+      <div class="hero-slide-overlay"></div>
+      <img src="https://up6.cc/2025/05/174656555332671.jpg" alt="أسعار منافسة" class="hero-slide-img" />
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-logo">
+        <img src="https://up6.cc/2025/05/174656540848771.png" alt="شعار كارلفت" />
+      </div>
+
+      <h1 class="hero-title">
+        <span class="text-gold">CAR</span>LIFT الإمارات
+      </h1>
+
+      <div class="hero-subtitle">
+        <h2 id="hero-subtitle-title">خدمة توصيل فاخرة</h2>
+        <p id="hero-subtitle-text">في جميع أنحاء الإمارات</p>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="https://wa.me/971561627014" target="_blank" class="btn btn-primary btn-lg">
+          احجز الآن
+        </a>
+        <a href="#services" class="btn btn-outline btn-lg">
+          تعرف على خدماتنا
+        </a>
+      </div>
+
+      <a href="#services" class="hero-scroll">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>
+          <span class="text-gold">خدماتنا</span> المميزة
+        </h2>
+        <p>
+          نقدم خدمة توصيل فاخرة وموثوقة في جميع أنحاء الإمارات العربية المتحدة بأسعار منافسة وجودة عالية
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <h3 class="service-title">تغطية شاملة</h3>
+          <p class="service-description">خدماتنا متوفرة في جميع إمارات الدولة بدون استثناء</p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3 class="service-title">خيارات متنوعة</h3>
+          <p class="service-description">سيارات 4 راكب، 7 راكب، و11 راكب لجميع احتياجاتك</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-title">خدمة 24/7</h3>
+          <p class="service-description">متوفرون على مدار الساعة طوال أيام الأسبوع</p>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3 class="service-title">أمان وراحة</h3>
+          <p class="service-description">سائقون محترفون وسيارات حديثة مكيفة بالكامل</p>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+            </svg>
+          </div>
+          <h3 class="service-title">أسعار منافسة</h3>
+          <p class="service-description">أفضل الأسعار مع جودة خدمة لا مثيل لها</p>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+            </svg>
+          </div>
+          <h3 class="service-title">خدمة عملاء متميزة</h3>
+          <p class="service-description">فريق خدمة عملاء جاهز للرد على استفساراتك</p>
+        </div>
+      </div>
+
+      <div class="cities-list">
+        <h3>خدمة كارلفت متوفرة في:</h3>
+        <div class="cities-tags">
+          <span class="city-tag">أبوظبي</span>
+          <span class="city-tag">العين</span>
+          <span class="city-tag">دبي</span>
+          <span class="city-tag">الشارقة</span>
+          <span class="city-tag">عجمان</span>
+          <span class="city-tag">الفجيرة</span>
+          <span class="city-tag">خورفكان</span>
+          <span class="city-tag">رأس الخيمة</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Car Gallery Section -->
+  <section class="car-gallery" id="cars">
+    <div class="container">
+      <div class="section-title">
+        <h2>
+          <span class="text-gold">أسطول</span> سياراتنا
+        </h2>
+        <p>
+          نوفر مجموعة متنوعة من السيارات الحديثة والمريحة لتلبية جميع احتياجاتك
+        </p>
+      </div>
+
+      <div class="car-tabs">
+        <div class="car-tabs-container">
+          <button class="car-tab active" data-tab="0">سيارات 4 راكب</button>
+          <button class="car-tab" data-tab="1">سيارات 7 راكب</button>
+          <button class="car-tab" data-tab="2">سيارات 11 راكب</button>
+        </div>
+      </div>
+
+      <div class="car-info">
+        <h3 id="car-type">سيارات 4 راكب</h3>
+        <p id="car-description">مثالية للتنقلات اليومية والرحلات القصيرة</p>
+        <div class="car-capacity">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          <span id="car-capacity">سعة 4 ركاب</span>
+        </div>
+      </div>
+
+      <div class="car-images" id="car-images">
+        <!-- Car Images will be loaded dynamically -->
+        <div class="car-image-container" data-img="https://up6.cc/2025/05/174656555341133.jpg">
+          <img src="https://up6.cc/2025/05/174656555341133.jpg" alt="سيارة 4 راكب - صورة 1" class="car-image" />
+          <div class="car-image-overlay">
+            <div class="car-image-button">عرض الصورة</div>
+          </div>
+        </div>
+        <div class="car-image-container" data-img="https://up6.cc/2025/05/174656572330082.jpg">
+          <img src="https://up6.cc/2025/05/174656572330082.jpg" alt="سيارة 4 راكب - صورة 2" class="car-image" />
+          <div class="car-image-overlay">
+            <div class="car-image-button">عرض الصورة</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-features">
+        <h3>جميع سياراتنا تتميز بـ:</h3>
+        <div class="car-features-grid">
+          <div class="car-feature">
+            <p>تكييف ممتاز</p>
+          </div>
+          <div class="car-feature">
+            <p>مقاعد مريحة</p>
+          </div>
+          <div class="car-feature">
+            <p>نظافة عالية</p>
+          </div>
+          <div class="car-feature">
+            <p>صيانة دورية</p>
+          </div>
+          <div class="car-feature">
+            <p>مساحة واسعة للأمتعة</p>
+          </div>
+          <div class="car-feature">
+            <p>سائقين محترفين</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2>
+          <span class="text-gold">آراء</span> عملائنا
+        </h2>
+        <p>نفتخر بثقة عملائنا وآرائهم الإيجابية حول خدماتنا</p>
+      </div>
+
+      <div class="testimonials-slider">
+        <div class="testimonials-container">
+          <div class="testimonials-track" id="testimonials-track">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="testimonial-avatar">أ</div>
+                  <div class="testimonial-info">
+                    <div class="testimonial-name">أحمد محمد</div>
+                    <div class="testimonial-location">دبي</div>
+                  </div>
+                  <div class="testimonial-rating">
+                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  </div>
+                </div>
+                <p class="testimonial-text">"خدمة ممتازة وسائق محترف جداً. السيارة كانت نظيفة ومريحة والسعر مناسب جداً مقارنة بالخدمات الأخرى."</p>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="testimonial-avatar">ف</div>
+                  <div class="testimonial-info">
+                    <div class="testimonial-name">فاطمة علي</div>
+                    <div class="testimonial-location">أبوظبي</div>
+                  </div>
+                  <div class="testimonial-rating">
+                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  </div>
+                </div>
+                <p class="testimonial-text">"استخدمت خدمة كارلفت للذهاب من أبوظبي إلى دبي، كانت تجربة رائعة والسائق وصل في الموعد المحدد بالضبط."</p>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="testimonial-avatar">خ</div>
+                  <div class="testimonial-info">
+                    <div class="testimonial-name">خالد عبدالله</div>
+                    <div class="testimonial-location">الشارقة</div>
+                  </div>
+                  <div class="testimonial-rating">
+                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg class="star-empty" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  </div>
+                </div>
+                <p class="testimonial-text">"سيارة عائلية مريحة وواسعة، والسائق كان متعاوناً جداً. سأستخدم خدماتهم مرة أخرى بالتأكيد."</p>
+              </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="testimonial-avatar">م</div>
+                  <div class="testimonial-info">
+                    <div class="testimonial-name">مريم أحمد</div>
+                    <div class="testimonial-location">العين</div>
+                  </div>
+                  <div class="testimonial-rating">
+                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <svg class="star-filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  </div>
+                </div>
+                <p class="testimonial-text">"خدمة سريعة وموثوقة، والأسعار معقولة جداً. أنصح بها للجميع خاصة للرحلات العائلية."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="testimonial-nav-button testimonial-prev" id="testimonial-prev" aria-label="السابق">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button class="testimonial-nav-button testimonial-next" id="testimonial-next" aria-label="التالي">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="testimonial-dots" id="testimonial-dots">
+          <button class="testimonial-dot active" data-index="0" aria-label="التقييم 1"></button>
+          <button class="testimonial-dot" data-index="1" aria-label="التقييم 2"></button>
+          <button class="testimonial-dot" data-index="2" aria-label="التقييم 3"></button>
+          <button class="testimonial-dot" data-index="3" aria-label="التقييم 4"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="contact-decoration contact-decoration-1"></div>
+    <div class="contact-decoration contact-decoration-2"></div>
+
+    <div class="container relative z-10">
+      <div class="section-title">
+        <h2>
+          <span class="text-gold">تواصل</span> معنا
+        </h2>
+        <p>نحن هنا لخدمتك على مدار الساعة. لا تتردد في التواصل معنا لأي استفسار أو حجز</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-card">
+          <div class="contact-info-content">
+            <h3 class="contact-info-title">معلومات الاتصال</h3>
+
+            <div class="contact-info-items">
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="contact-info-text">
+                  <h4>رقم الهاتف</h4>
+                  <p>+971 56 162 7014</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                  </svg>
+                </div>
+                <div class="contact-info-text">
+                  <h4>واتساب</h4>
+                  <p>+971 56 162 7014</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="contact-info-text">
+                  <h4>نطاق الخدمة</h4>
+                  <p>جميع إمارات الدولة</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-info-text">
+                  <h4>ساعات العمل</h4>
+                  <p>24 ساعة / 7 أيام في الأسبوع</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-booking">
+          <h3 class="contact-booking-title">احجز الآن</h3>
+          <p class="contact-booking-text">للحجز السريع والاستفسارات، تواصل معنا عبر واتساب أو اتصل بنا مباشرة</p>
+
+          <div class="contact-booking-buttons">
+            <a href="https://wa.me/971561627014" target="_blank" class="btn btn-primary btn-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+              واتساب
+            </a>
+
+            <a href="tel:+971561627014" class="btn btn-outline btn-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              اتصل الآن
+            </a>
+          </div>
+
+          <div class="contact-qr">
+            <p class="contact-qr-text">أو قم بمسح رمز الواتساب</p>
+            <div class="contact-qr-code">
+              <img src="https://placeholder.svg?height=200&width=200" alt="رمز واتساب للتواصل" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <img src="https://up6.cc/2025/05/174656540848771.png" alt="شعار كارلفت" />
+            <span class="footer-logo-text">
+              <span class="text-gold">CAR</span>LIFT الإمارات
+            </span>
+          </div>
+          <p class="footer-description">
+            خدمة توصيل فاخرة وموثوقة في جميع أنحاء الإمارات العربية المتحدة بأسعار منافسة وجودة عالية
+          </p>
+          <div class="footer-social">
+            <a href="https://wa.me/971561627014" target="_blank" class="footer-social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+                <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z" />
+                <path d="M14 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z" />
+                <path d="M9.5 13.5c.5 1.5 2.5 2 4 1" />
+              </svg>
+            </a>
+            <a href="tel:+971561627014" class="footer-social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-title">روابط سريعة</h3>
+          <ul class="footer-links">
+            <li><a href="#services" class="footer-link">خدماتنا</a></li>
+            <li><a href="#cars" class="footer-link">سياراتنا</a></li>
+            <li><a href="#testimonials" class="footer-link">آراء العملاء</a></li>
+            <li><a href="#contact" class="footer-link">تواصل معنا</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">مناطق الخدمة</h3>
+          <div class="footer-cities">
+            <div class="footer-city">أبوظبي</div>
+            <div class="footer-city">دبي</div>
+            <div class="footer-city">الشارقة</div>
+            <div class="footer-city">عجمان</div>
+            <div class="footer-city">رأس الخيمة</div>
+            <div class="footer-city">الفجيرة</div>
+            <div class="footer-city">العين</div>
+            <div class="footer-city">خورفكان</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">جميع الحقوق محفوظة © <span id="current-year">2025</span> CARLIFT الإمارات</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Image Modal -->
+  <div class="modal" id="image-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="modal-image-container">
+        <img src="/placeholder.svg" alt="صورة مكبرة" class="modal-image" id="modal-image" />
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Car Data
+    const carData = [
+      {
+        type: "سيارات 4 راكب",
+        description: "مثالية للتنقلات اليومية والرحلات القصيرة",
+        capacity: 4,
+        images: [
+          "https://up6.cc/2025/05/174656555341133.jpg",
+          "https://up6.cc/2025/05/174656572330082.jpg"
+        ]
+      },
+      {
+        type: "سيارات 7 راكب",
+        description: "مناسبة للعائلات والمجموعات الصغيرة",
+        capacity: 7,
+        images: [
+          "https://up6.cc/2025/05/174656555340222.jpg",
+          "https://up6.cc/2025/05/174656572325941.jpg"
+        ]
+      },
+      {
+        type: "سيارات 11 راكب",
+        description: "مثالية للمجموعات الكبيرة والرحلات الجماعية",
+        capacity: 11,
+        images: [
+          "https://up6.cc/2025/05/174656555332671.jpg",
+          "https://up6.cc/2025/05/174656572330082.jpg"
+        ]
+      }
+    ];
+
+    // Hero Slider
+    const heroSlides = [
+      {
+        title: "خدمة توصيل فاخرة",
+        subtitle: "في جميع أنحاء الإمارات"
+      },
+      {
+        title: "سيارات حديثة ومريحة",
+        subtitle: "لجميع احتياجاتك"
+      },
+      {
+        title: "أسعار منافسة",
+        subtitle: "وخدمة على مدار الساعة"
+      }
+    ];
+
+    // DOM Elements
+    const header = document.getElementById('header');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const heroSlideElements = document.querySelectorAll('.hero-slide');
+    const heroSubtitleTitle = document.getElementById('hero-subtitle-title');
+    const heroSubtitleText = document.getElementById('hero-subtitle-text');
+    const carTabs = document.querySelectorAll('.car-tab');
+    const carType = document.getElementById('car-type');
+    const carDescription = document.getElementById('car-description');
+    const carCapacity = document.getElementById('car-capacity');
+    const carImages = document.getElementById('car-images');
+    const testimonialTrack = document.getElementById('testimonials-track');
+    const testimonialPrev = document.getElementById('testimonial-prev');
+    const testimonialNext = document.getElementById('testimonial-next');
+    const testimonialDots = document.getElementById('testimonial-dots');
+    const testimonialDotElements = document.querySelectorAll('.testimonial-dot');
+    const imageModal = document.getElementById('image-modal');
+    const modalImage = document.getElementById('modal-image');
+    const modalClose = document.getElementById('modal-close');
+    const currentYearElement = document.getElementById('current-year');
+
+    // Set current year
+    currentYearElement.textContent = new Date().getFullYear();
+
+    // Header Scroll Effect
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile Menu Toggle
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      
+      // Change icon based on menu state
+      if (mobileMenu.classList.contains('active')) {
+        mobileMenuBtn.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        `;
+      } else {
+        mobileMenuBtn.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        `;
+      }
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        mobileMenuBtn.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        `;
+      });
+    });
+
+    // Hero Slider
+    let currentHeroSlide = 0;
+    
+    function showHeroSlide(index) {
+      heroSlideElements.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+      
+      heroSubtitleTitle.textContent = heroSlides[index].title;
+      heroSubtitleText.textContent = heroSlides[index].subtitle;
+    }
+    
+    function nextHeroSlide() {
+      currentHeroSlide = (currentHeroSlide + 1) % heroSlideElements.length;
+      showHeroSlide(currentHeroSlide);
+    }
+    
+    // Auto slide for hero
+    setInterval(nextHeroSlide, 5000);
+
+    // Car Tabs
+    carTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const tabIndex = parseInt(tab.getAttribute('data-tab'));
+        
+        // Update active tab
+        carTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        
+        // Update car info
+        carType.textContent = carData[tabIndex].type;
+        carDescription.textContent = carData[tabIndex].description;
+        carCapacity.textContent = `سعة ${carData[tabIndex].capacity} ركاب`;
+        
+        // Update car images
+        carImages.innerHTML = '';
+        carData[tabIndex].images.forEach((image, i) => {
+          carImages.innerHTML += `
+            <div class="car-image-container" data-img="${image}">
+              <img src="${image}" alt="${carData[tabIndex].type} - صورة ${i + 1}" class="car-image" />
+              <div class="car-image-overlay">
+                <div class="car-image-button">عرض الصورة</div>
+              </div>
+            </div>
+          `;
+        });
+        
+        // Add click event to new images
+        document.querySelectorAll('.car-image-container').forEach(container => {
+          container.addEventListener('click', () => {
+            const imgSrc = container.getAttribute('data-img');
+            modalImage.src = imgSrc;
+            imageModal.classList.add('active');
+          });
+        });
+      });
+    });
+
+    // Testimonials Slider
+    let currentTestimonial = 0;
+    const testimonialCount = 4;
+    
+    function showTestimonial(index) {
+      testimonialTrack.style.transform = `translateX(${index * 100}%)`;
+      
+      // Update dots
+      testimonialDotElements.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+    
+    testimonialPrev.addEventListener('click', () => {
+      currentTestimonial = (currentTestimonial - 1 + testimonialCount) % testimonialCount;
+      showTestimonial(currentTestimonial);
+    });
+    
+    testimonialNext.addEventListener('click', () => {
+      currentTestimonial = (currentTestimonial + 1) % testimonialCount;
+      showTestimonial(currentTestimonial);
+    });
+    
+    testimonialDotElements.forEach(dot => {
+      dot.addEventListener('click', () => {
+        currentTestimonial = parseInt(dot.getAttribute('data-index'));
+        showTestimonial(currentTestimonial);
+      });
+    });
+    
+    // Auto slide for testimonials
+    let testimonialInterval = setInterval(() => {
+      currentTestimonial = (currentTestimonial + 1) % testimonialCount;
+      showTestimonial(currentTestimonial);
+    }, 5000);
+    
+    // Pause auto slide when interacting with testimonials
+    [testimonialPrev, testimonialNext, ...testimonialDotElements].forEach(el => {
+      el.addEventListener('click', () => {
+        clearInterval(testimonialInterval);
+        testimonialInterval = setInterval(() => {
+          currentTestimonial = (currentTestimonial + 1) % testimonialCount;
+          showTestimonial(currentTestimonial);
+        }, 5000);
+      });
+    });
+
+    // Image Modal
+    document.querySelectorAll('.car-image-container').forEach(container => {
+      container.addEventListener('click', () => {
+        const imgSrc = container.getAttribute('data-img');
+        modalImage.src = imgSrc;
+        imageModal.classList.add('active');
+      });
+    });
+    
+    modalClose.addEventListener('click', () => {
+      imageModal.classList.remove('active');
+    });
+    
+    imageModal.addEventListener('click', (e) => {
+      if (e.target === imageModal) {
+        imageModal.classList.remove('active');
+      }
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

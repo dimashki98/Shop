@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة الورد الذهبية - للتوصيل الفاخر والنقل المتميز</title>
+    <meta name="description" content="شركة الورد الذهبية للتوصيل والنقل في الإمارات - خدمة 24/7 - توصيل أشخاص وطلبات - بإدارة أبو الورد">
+    <meta name="keywords" content="شركة توصيل الإمارات، توصيل طلبات دبي، توصيل أشخاص أبوظبي، كارلفت الشارقة، خدمة توصيل عجمان، مواصلات خاصة الفجيرة، سائق خاص رأس الخيمة، توصيل سريع أم القيوين، حجز مشوار الإمارات، نقل مشاوير دبي، شركة توصيل موثوقة، كارلفت فخم، نقل خاص مريح، توصيل هدايا سريع، توصيل حيوانات أليفة آمن، شركة الورد الذهبية، أبو الورد، خدمة متميزة">
+    
+    <!-- Google Fonts - Jazeera Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', 'Amiri', sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+            direction: rtl;
+        }
+
+        /* Background Images Slideshow */
+        .bg-slideshow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+
+        .bg-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .bg-slide.active {
+            opacity: 0.3;
+        }
+
+        .bg-slide:nth-child(1) {
+            background-image: url('https://up6.cc/2025/05/174809647226441.jpg');
+        }
+
+        .bg-slide:nth-child(2) {
+            background-image: url('https://up6.cc/2025/05/174809647231762.jpg');
+        }
+
+        .bg-slide:nth-child(3) {
+            background-image: url('https://up6.cc/2025/05/174809647233043.jpg');
+        }
+
+        /* Overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.8) 100%);
+            z-index: -1;
+        }
+
+        /* Golden Pattern */
+        .golden-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 25% 25%, #ffd700 1px, transparent 1px),
+                radial-gradient(circle at 75% 75%, #ffd700 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.05;
+            z-index: -1;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,215,0,0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(0,0,0,0.95);
+            border-bottom: 1px solid rgba(255,215,0,0.5);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            background: #fff;
+            padding: 5px;
+            box-shadow: 0 0 20px rgba(255,215,0,0.5);
+            position: relative;
+        }
+
+        .logo-img::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            width: 16px;
+            height: 16px;
+            background: #ffd700;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-text p {
+            font-size: 0.8rem;
+            color: #ccc;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            background: rgba(255,215,0,0.1);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 10px;
+            color: #ffd700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255,215,0,0.2);
+            border-color: rgba(255,215,0,0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            z-index: 10;
+        }
+
+        .management-badge {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #000;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(255,215,0,0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 50px rgba(255,215,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 4vw, 2.5rem);
+            margin-bottom: 1rem;
+            color: #fff;
+            font-weight: 300;
+        }
+
+        .hero-slogan {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: #ccc;
+            margin-bottom: 3rem;
+            font-style: italic;
+            border-right: 4px solid #ffd700;
+            padding-right: 1rem;
+            display: inline-block;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: #fff;
+        }
+
+        .btn-call {
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #000;
+        }
+
+        .btn-copy {
+            background: linear-gradient(45deg, #666, #888);
+            color: #fff;
+            padding: 1rem;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255,215,0,0.5);
+            box-shadow: 0 20px 40px rgba(255,215,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #ffd700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #ccc;
+            font-size: 1rem;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 2rem;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+
+        .section-divider {
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            margin: 0 auto 3rem;
+            border-radius: 2px;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255,215,0,0.6);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: #000;
+            box-shadow: 0 10px 30px rgba(255,215,0,0.3);
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .feature-desc {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 15px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255,215,0,0.6);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #000;
+            flex-shrink: 0;
+        }
+
+        .service-text {
+            color: #fff;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Gallery */
+        .gallery-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .main-gallery {
+            position: relative;
+            height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255,215,0,0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .gallery-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .gallery-slide.active {
+            opacity: 1;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 2rem;
+            color: #fff;
+        }
+
+        .gallery-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ffd700;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-desc {
+            color: #ccc;
+        }
+
+        .gallery-dots {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .gallery-dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-dot.active {
+            background: #ffd700;
+            transform: scale(1.2);
+        }
+
+        .gallery-thumbs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .gallery-thumb {
+            height: 120px;
+            border-radius: 15px;
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+            border: 2px solid rgba(255,215,0,0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-thumb:hover {
+            border-color: rgba(255,215,0,0.6);
+            transform: scale(1.05);
+        }
+
+        .gallery-thumb.active {
+            border-color: #ffd700;
+        }
+
+        .gallery-thumb::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-thumb.active::after {
+            background: rgba(255,215,0,0.2);
+        }
+
+        /* About Section */
+        .about-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .about-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #ccc;
+            margin-bottom: 2rem;
+        }
+
+        .about-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .about-badge {
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #000;
+            border-radius: 50px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Contact Section */
+        .contact-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2.5rem;
+            color: #000;
+            box-shadow: 0 15px 40px rgba(255,215,0,0.3);
+            position: relative;
+        }
+
+        .contact-icon::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 20px;
+            height: 20px;
+            background: #ff4444;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .contact-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        .contact-desc {
+            color: #ccc;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Keywords Section */
+        .keywords-section {
+            padding: 2rem;
+            background: rgba(0,0,0,0.5);
+            border-top: 1px solid rgba(255,215,0,0.3);
+        }
+
+        .keywords-text {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .keywords-label {
+            color: #ffd700;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 2rem;
+            background: rgba(0,0,0,0.8);
+            border-top: 1px solid rgba(255,215,0,0.3);
+            text-align: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #000;
+        }
+
+        .footer-text {
+            color: #ccc;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(255,215,0,0.3);
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+            z-index: 10000;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .logo {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo-img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .hero {
+                padding: 1rem;
+                min-height: 90vh;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .gallery-thumbs {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section {
+                padding: 3rem 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-thumbs {
+                grid-template-columns: 1fr;
+            }
+
+            .main-gallery {
+                height: 300px;
+            }
+
+            .contact-card {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Slideshow -->
+    <div class="bg-slideshow">
+        <div class="bg-slide active"></div>
+        <div class="bg-slide"></div>
+        <div class="bg-slide"></div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Golden Pattern -->
+    <div class="golden-pattern"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://up6.cc/2025/05/174809632749911.jpg" alt="شركة الورد الذهبية" class="logo-img">
+                <div class="logo-text">
+                    <h1>الورد الذهبية</h1>
+                    <p>التميز والجودة</p>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <a href="#" class="lang-btn" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i> EN
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="management-badge">
+                <i class="fas fa-star"></i>
+                بإدارة أبو الورد
+            </div>
+
+            <h1 class="hero-title">شركة الورد الذهبية</h1>
+            <h2 class="hero-subtitle">للتوصيل الفاخر والنقل المتميز</h2>
+            <p class="hero-slogan">التميز في كل رحلة</p>
+
+            <div class="cta-buttons">
+                <a href="https://wa.me/971551760567" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    واتساب فوري
+                </a>
+                <a href="tel:+971551760567" class="btn btn-call">
+                    <i class="fas fa-phone"></i>
+                    اتصال مباشر
+                </a>
+                <button onclick="copyNumber()" class="btn btn-copy" title="نسخ الرقم">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">25K+</div>
+                    <div class="stat-label">عميل راضٍ ومتميز</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">سيارة حديثة ومجهزة</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">إمارات نخدمها بتميز</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">ساعات العمل المستمر</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">التميز والجودة</h2>
+            <div class="section-divider"></div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="feature-title">خدمة مستمرة</h3>
+                    <p class="feature-desc">متاحون 24 ساعة يومياً طوال أيام الأسبوع</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">أمان تام</h3>
+                    <p class="feature-desc">حماية شاملة ومضمونة لجميع طلباتكم</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="feature-title">سرعة عالية</h3>
+                    <p class="feature-desc">توصيل سريع ومضمون في الوقت المحدد</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="feature-title">جودة متميزة</h3>
+                    <p class="feature-desc">خدمة احترافية بمعايير عالمية عالية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">خدماتنا المتميزة</h2>
+            <div class="section-divider"></div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="service-text">توصيل الأشخاص وخدمة الكارلفت المتطورة في جميع أنحاء الإمارات</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="service-text">توصيل الطلبات من المطاعم والمتاجر والصيدليات المختارة</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="service-text">نقل الحيوانات الأليفة بعناية فائقة وأمان تام</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="service-text">توصيل الهدايا والورود والمناسبات الخاصة والأعياد</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="service-text">الخدمات المستعجلة والطوارئ على مدار الساعة طوال أيام الأسبوع</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="service-text">نقل المستندات والوثائق المهمة والسرية بأمان</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="service-text">خدمة المطارات والفنادق والمراكز التجارية الكبرى</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="service-text">الرحلات السياحية والجولات في جميع إمارات دولة الإمارات</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">أسطول السيارات</h2>
+            <div class="section-divider"></div>
+
+            <div class="gallery-container">
+                <div class="main-gallery">
+                    <div class="gallery-slide active" style="background-image: url('https://up6.cc/2025/05/174656555332671.jpg')"></div>
+                    <div class="gallery-slide" style="background-image: url('https://up6.cc/2025/05/174656572325941.jpg')"></div>
+                    <div class="gallery-slide" style="background-image: url('https://up6.cc/2025/05/174656555341133.jpg')"></div>
+                    <div class="gallery-slide" style="background-image: url('https://up6.cc/2025/05/174656572330082.jpg')"></div>
+                    
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">سيارة رقم 1</h3>
+                        <p class="gallery-desc">من أسطولنا المتميز</p>
+                    </div>
+                </div>
+
+                <div class="gallery-dots">
+                    <div class="gallery-dot active" onclick="showGallerySlide(0)"></div>
+                    <div class="gallery-dot" onclick="showGallerySlide(1)"></div>
+                    <div class="gallery-dot" onclick="showGallerySlide(2)"></div>
+                    <div class="gallery-dot" onclick="showGallerySlide(3)"></div>
+                </div>
+
+                <div class="gallery-thumbs">
+                    <div class="gallery-thumb active" style="background-image: url('https://up6.cc/2025/05/174656555332671.jpg')" onclick="showGallerySlide(0)"></div>
+                    <div class="gallery-thumb" style="background-image: url('https://up6.cc/2025/05/174656572325941.jpg')" onclick="showGallerySlide(1)"></div>
+                    <div class="gallery-thumb" style="background-image: url('https://up6.cc/2025/05/174656555341133.jpg')" onclick="showGallerySlide(2)"></div>
+                    <div class="gallery-thumb" style="background-image: url('https://up6.cc/2025/05/174656572330082.jpg')" onclick="showGallerySlide(3)"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">عن شركة الورد</h2>
+            <div class="section-divider"></div>
+
+            <div class="about-card">
+                <p class="about-text">
+                    شركة الورد الذهبية هي الشركة الرائدة والمتخصصة في مجال خدمات التوصيل والنقل المتميز في دولة الإمارات العربية المتحدة. نحن نقدم خدمات احترافية وموثوقة بأعلى معايير الجودة والأمان والسرعة. فريقنا المحترف والمدرب على أحدث التقنيات يضمن تقديم أفضل تجربة خدمة لعملائنا الكرام في جميع أنحاء الإمارات السبع.
+                </p>
+
+                <div class="about-badges">
+                    <div class="about-badge">
+                        <i class="fas fa-users"></i>
+                        فريق محترف
+                    </div>
+                    <div class="about-badge">
+                        <i class="fas fa-map-marker-alt"></i>
+                        جميع الإمارات
+                    </div>
+                    <div class="about-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        أمان مضمون
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">تواصل معنا</h2>
+            <div class="section-divider"></div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3 class="contact-number">+971 55 176 0567</h3>
+                <p class="contact-desc">متاحون 24/7 لخدمتكم المتميزة</p>
+
+                <div class="contact-buttons">
+                    <a href="https://wa.me/971551760567" target="_blank" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        واتساب فوري
+                    </a>
+                    <a href="tel:+971551760567" class="btn btn-call">
+                        <i class="fas fa-phone"></i>
+                        اتصال مباشر
+                    </a>
+                    <button onclick="copyNumber()" class="btn btn-copy" title="نسخ الرقم">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keywords Section -->
+    <section class="keywords-section">
+        <div class="keywords-text">
+            <span class="keywords-label">الكلمات الدلالية:</span>
+            شركة توصيل الإمارات، توصيل طلبات دبي، توصيل أشخاص أبوظبي، كارلفت الشارقة، خدمة توصيل عجمان، مواصلات خاصة الفجيرة، سائق خاص رأس الخيمة، توصيل سريع أم القيوين، حجز مشوار الإمارات، نقل مشاوير دبي، شركة توصيل موثوقة، كارلفت فخم، نقل خاص مريح، توصيل هدايا سريع، توصيل حيوانات أليفة آمن، شركة الورد الذهبية، أبو الورد، خدمة متميزة، توصيل مطاعم، توصيل صيدليات، توصيل متاجر، خدمة طوارئ، نقل مرضى، رحلات سياحية، خدمة مطارات، توصيل وثائق، نقل موظفين، خدمة شركات، توصيل مناسبات، نقل عائلات، سائق محترف، سيارة نظيفة، خدمة أمينة، توصيل مضمون، أسعار مناسبة، حجز سهل، دفع آمن، تتبع الطلب، خدمة عملاء ممتازة، شركة مرخصة، تأمين شامل، سائقين مدربين، سيارات حديثة، خدمة VIP، توصيل فوري، نقل آمن، مواصلات مريحة، خدمة احترافية، شركة معتمدة، توصيل موثوق، نقل سريع، خدمة راقية، مواصلات فاخرة، توصيل دقيق، نقل مضمون، خدمة متاحة، مواصلات سهلة، توصيل مريح، نقل آمن ومضمون
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logo">
+            <div class="footer-logo-icon">
+                <i class="fas fa-car"></i>
+            </div>
+            <h3>شركة الورد الذهبية</h3>
+        </div>
+        <p class="footer-text">© 2025 شركة الورد الذهبية للتوصيل والنقل. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        تم نسخ الرقم بنجاح!
+    </div>
+
+    <script>
+        // Background Slideshow
+        let bgCurrentSlide = 0;
+        const bgSlides = document.querySelectorAll('.bg-slide');
+        
+        function showNextBgSlide() {
+            bgSlides[bgCurrentSlide].classList.remove('active');
+            bgCurrentSlide = (bgCurrentSlide + 1) % bgSlides.length;
+            bgSlides[bgCurrentSlide].classList.add('active');
+        }
+        
+        setInterval(showNextBgSlide, 5000);
+
+        // Gallery
+        let galleryCurrentSlide = 0;
+        const gallerySlides = document.querySelectorAll('.gallery-slide');
+        const galleryDots = document.querySelectorAll('.gallery-dot');
+        const galleryThumbs = document.querySelectorAll('.gallery-thumb');
+        const galleryTitle = document.querySelector('.gallery-title');
+        
+        function showGallerySlide(index) {
+            // Remove active class from all
+            gallerySlides.forEach(slide => slide.classList.remove('active'));
+            galleryDots.forEach(dot => dot.classList.remove('active'));
+            galleryThumbs.forEach(thumb => thumb.classList.remove('active'));
+            
+            // Add active class to current
+            gallerySlides[index].classList.add('active');
+            galleryDots[index].classList.add('active');
+            galleryThumbs[index].classList.add('active');
+            
+            // Update title
+            galleryTitle.textContent = `سيارة رقم ${index + 1}`;
+            
+            galleryCurrentSlide = index;
+        }
+        
+        function showNextGallerySlide() {
+            const nextIndex = (galleryCurrentSlide + 1) % gallerySlides.length;
+            showGallerySlide(nextIndex);
+        }
+        
+        setInterval(showNextGallerySlide, 4000);
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Copy phone number
+        function copyNumber() {
+            const phoneNumber = '+971551760567';
+            
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(phoneNumber).then(function() {
+                    showToast();
+                });
+            } else {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = phoneNumber;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showToast();
+            }
+        }
+
+        // Show toast notification
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            
+            setTimeout(function() {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Language toggle (placeholder)
+        function toggleLanguage() {
+            // This would switch between Arabic and English
+            console.log('Language toggle clicked');
+        }
+
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            
+            setTimeout(function() {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>

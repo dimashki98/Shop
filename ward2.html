@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة الورد الذهبية - للتوصيل الفاخر والنقل المتميز</title>
+    <meta name="description" content="شركة الورد الذهبية للتوصيل والنقل في الإمارات - خدمة 24/7 - توصيل أشخاص وطلبات - بإدارة أبو الورد">
+    <meta name="keywords" content="شركة توصيل الإمارات، توصيل طلبات دبي، توصيل أشخاص أبوظبي، كارلفت الشارقة، خدمة توصيل عجمان، مواصلات خاصة الفجيرة، سائق خاص رأس الخيمة، توصيل سريع أم القيوين، حجز مشوار الإمارات، نقل مشاوير دبي، شركة توصيل موثوقة، كارلفت فخم، نقل خاص مريح، توصيل هدايا سريع، توصيل حيوانات أليفة آمن، شركة الورد الذهبية، أبو الورد، خدمة متميزة">
+    
+    <!-- Google Fonts - Jazeera Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', 'Amiri', sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+            direction: rtl;
+        }
+
+        /* Language Toggle */
+        body.lang-en {
+            direction: ltr;
+        }
+
+        body.lang-en .hero-slogan {
+            border-left: 4px solid #ffd700;
+            border-right: none;
+            padding-left: 1rem;
+            padding-right: 0;
+        }
+
+        body.lang-en .service-card {
+            flex-direction: row-reverse;
+        }
+
+        /* Background Images Slideshow */
+        .bg-slideshow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+
+        .bg-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .bg-slide.active {
+            opacity: 0.3;
+        }
+
+        .bg-slide:nth-child(1) {
+            background-image: url('https://up6.cc/2025/05/174809647226441.jpg');
+        }
+
+        .bg-slide:nth-child(2) {
+            background-image: url('https://up6.cc/2025/05/174809647231762.jpg');
+        }
+
+        .bg-slide:nth-child(3) {
+            background-image: url('https://up6.cc/2025/05/174809647233043.jpg');
+        }
+
+        /* Overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.8) 100%);
+            z-index: -1;
+        }
+
+        /* Golden Pattern */
+        .golden-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 25% 25%, #ffd700 1px, transparent 1px),
+                radial-gradient(circle at 75% 75%, #ffd700 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.05;
+            z-index: -1;
+        }
+
+        /* Navigation - Fixed sizing issues */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,215,0,0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(0,0,0,0.95);
+            border-bottom: 1px solid rgba(255,215,0,0.5);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            background: #fff;
+            padding: 3px;
+            box-shadow: 0 0 15px rgba(255,215,0,0.4);
+            position: relative;
+        }
+
+        .logo-img::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            width: 12px;
+            height: 12px;
+            background: #ffd700;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .logo-text h1 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .logo-text p {
+            font-size: 0.7rem;
+            color: #ccc;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .lang-btn {
+            padding: 0.4rem 0.8rem;
+            background: rgba(255,215,0,0.1);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 8px;
+            color: #ffd700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.8rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255,215,0,0.2);
+            border-color: rgba(255,215,0,0.5);
+        }
+
+        /* Hero Section - Fixed padding to account for navbar */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 5rem 2rem 2rem;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            z-index: 10;
+        }
+
+        .management-badge {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #000;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(255,215,0,0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 50px rgba(255,215,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 4vw, 2.5rem);
+            margin-bottom: 1rem;
+            color: #fff;
+            font-weight: 300;
+        }
+
+        .hero-slogan {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: #ccc;
+            margin-bottom: 3rem;
+            font-style: italic;
+            border-right: 4px solid #ffd700;
+            padding-right: 1rem;
+            display: inline-block;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: #fff;
+        }
+
+        .btn-call {
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #000;
+        }
+
+        .btn-copy {
+            background: linear-gradient(45deg, #666, #888);
+            color: #fff;
+            padding: 1rem;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255,215,0,0.5);
+            box-shadow: 0 20px 40px rgba(255,215,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #ffd700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #ccc;
+            font-size: 1rem;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 2rem;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+
+        .section-divider {
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            margin: 0 auto 3rem;
+            border-radius: 2px;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255,215,0,0.6);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: #000;
+            box-shadow: 0 10px 30px rgba(255,215,0,0.3);
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .feature-desc {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 15px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255,215,0,0.6);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #000;
+            flex-shrink: 0;
+        }
+
+        .service-text {
+            color: #fff;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Gallery */
+        .gallery-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .main-gallery {
+            position: relative;
+            height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255,215,0,0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .gallery-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .gallery-slide.active {
+            opacity: 1;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 2rem;
+            color: #fff;
+        }
+
+        .gallery-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ffd700;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-desc {
+            color: #ccc;
+        }
+
+        .gallery-dots {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .gallery-dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-dot.active {
+            background: #ffd700;
+            transform: scale(1.2);
+        }
+
+        .gallery-thumbs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .gallery-thumb {
+            height: 120px;
+            border-radius: 15px;
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+            border: 2px solid rgba(255,215,0,0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-thumb:hover {
+            border-color: rgba(255,215,0,0.6);
+            transform: scale(1.05);
+        }
+
+        .gallery-thumb.active {
+            border-color: #ffd700;
+        }
+
+        .gallery-thumb::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-thumb.active::after {
+            background: rgba(255,215,0,0.2);
+        }
+
+        /* About Section */
+        .about-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .about-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #ccc;
+            margin-bottom: 2rem;
+        }
+
+        .about-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .about-badge {
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #000;
+            border-radius: 50px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Contact Section */
+        .contact-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2.5rem;
+            color: #000;
+            box-shadow: 0 15px 40px rgba(255,215,0,0.3);
+            position: relative;
+        }
+
+        .contact-icon::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 20px;
+            height: 20px;
+            background: #ff4444;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .contact-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        .contact-desc {
+            color: #ccc;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Keywords Section */
+        .keywords-section {
+            padding: 2rem;
+            background: rgba(0,0,0,0.5);
+            border-top: 1px solid rgba(255,215,0,0.3);
+        }
+
+        .keywords-text {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .keywords-label {
+            color: #ffd700;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 2rem;
+            background: rgba(0,0,0,0.8);
+            border-top: 1px solid rgba(255,215,0,0.3);
+            text-align: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #000;
+        }
+
+        .footer-text {
+            color: #ccc;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(255,215,0,0.3);
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+            z-index: 10000;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        /* Responsive Design - Fixed for mobile and desktop */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0.6rem 0.8rem;
+            }
+
+            .nav-container {
+                gap: 0.5rem;
+            }
+
+            .logo {
+                gap: 0.5rem;
+            }
+
+            .logo-img {
+                width: 35px;
+                height: 35px;
+            }
+
+            .logo-text h1 {
+                font-size: 1rem;
+            }
+
+            .logo-text p {
+                font-size: 0.6rem;
+            }
+
+            .lang-btn {
+                padding: 0.3rem 0.6rem;
+                font-size: 0.7rem;
+            }
+
+            .hero {
+                padding: 4rem 1rem 2rem;
+                min-height: 90vh;
+            }
+
+            .management-badge {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .stat-card {
+                padding: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.2rem;
+            }
+
+            .gallery-thumbs {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .main-gallery {
+                height: 300px;
+            }
+
+            .about-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-card {
+                padding: 2rem 1rem;
+            }
+
+            .contact-number {
+                font-size: 1.5rem;
+            }
+
+            .section {
+                padding: 3rem 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 0.5rem;
+            }
+
+            .logo-img {
+                width: 30px;
+                height: 30px;
+            }
+
+            .logo-text h1 {
+                font-size: 0.9rem;
+            }
+
+            .logo-text p {
+                font-size: 0.5rem;
+            }
+
+            .lang-btn {
+                padding: 0.25rem 0.5rem;
+                font-size: 0.65rem;
+            }
+
+            .hero {
+                padding: 3.5rem 0.5rem 1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+
+            .stat-card {
+                padding: 1rem;
+            }
+
+            .gallery-thumbs {
+                grid-template-columns: 1fr;
+            }
+
+            .main-gallery {
+                height: 250px;
+            }
+
+            .contact-card {
+                padding: 1.5rem 0.8rem;
+            }
+
+            .section {
+                padding: 2rem 0.5rem;
+            }
+        }
+
+        /* Desktop specific adjustments */
+        @media (min-width: 1200px) {
+            .navbar {
+                padding: 1rem 2rem;
+            }
+
+            .logo-img {
+                width: 55px;
+                height: 55px;
+            }
+
+            .logo-text h1 {
+                font-size: 1.4rem;
+            }
+
+            .logo-text p {
+                font-size: 0.8rem;
+            }
+
+            .lang-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                padding: 6rem 2rem 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Slideshow -->
+    <div class="bg-slideshow">
+        <div class="bg-slide active"></div>
+        <div class="bg-slide"></div>
+        <div class="bg-slide"></div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Golden Pattern -->
+    <div class="golden-pattern"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://up6.cc/2025/05/174809632749911.jpg" alt="شركة الورد الذهبية" class="logo-img">
+                <div class="logo-text">
+                    <h1 id="logo-title">الورد الذهبية</h1>
+                    <p id="logo-subtitle">التميز والجودة</p>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <button class="lang-btn" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                    <span id="lang-text">EN</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="management-badge">
+                <i class="fas fa-star"></i>
+                <span id="management-text">بإدارة أبو الورد</span>
+            </div>
+
+            <h1 class="hero-title" id="hero-title">شركة الورد الذهبية</h1>
+            <h2 class="hero-subtitle" id="hero-subtitle">للتوصيل الفاخر والنقل المتميز</h2>
+            <p class="hero-slogan" id="hero-slogan">التميز في كل رحلة</p>
+
+            <div class="cta-buttons">
+                <a href="https://wa.me/971551760567" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span id="whatsapp-text">واتساب فوري</span>
+                </a>
+                <a href="tel:+971551760567" class="btn btn-call">
+                    <i class="fas fa-phone"></i>
+                    <span id="call-text">اتصال مباشر</span>
+                </a>
+                <button onclick="copyNumber()" class="btn btn-copy" title="نسخ الرقم">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">25K+</div>
+                    <div class="stat-label" id="stat1">عميل راضٍ ومتميز</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label" id="stat2">سيارة حديثة ومجهزة</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label" id="stat3">إمارات نخدمها بتميز</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label" id="stat4">ساعات العمل المستمر</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" id="features-title">التميز والجودة</h2>
+            <div class="section-divider"></div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="feature-title" id="feature1-title">خدمة مستمرة</h3>
+                    <p class="feature-desc" id="feature1-desc">متاحون 24 ساعة يومياً طوال أيام الأسبوع</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title" id="feature2-title">أمان تام</h3>
+                    <p class="feature-desc" id="feature2-desc">حماية شاملة ومضمونة لجميع طلباتكم</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="feature-title" id="feature3-title">سرعة عالية</h3>
+                    <p class="feature-desc" id="feature3-desc">توصيل سريع ومضمون في الوقت المحدد</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="feature-title" id="feature4-title">جودة متميزة</h3>
+                    <p class="feature-desc" id="feature4-desc">خدمة احترافية بمعايير عالمية عالية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" id="services-title">خدماتنا المتميزة</h2>
+            <div class="section-divider"></div>
+
+            <div class="services-grid" id="services-grid">
+                <!-- Services will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" id="gallery-title">أسطول السيارات</h2>
+            <div class="section-divider"></div>
+
+            <div class="gallery-container">
+                <div class="main-gallery">
+                    <div class="gallery-slide active" style="background-image: url('https://up6.cc/2025/05/174809647226441.jpg')"></div>
+                    <div class="gallery-slide" style="background-image: url('https://up6.cc/2025/05/174809647231762.jpg')"></div>
+                    <div class="gallery-slide" style="background-image: url('https://up6.cc/2025/05/174809647233043.jpg')"></div>
+                    
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title" id="gallery-slide-title">سيارة رقم 1</h3>
+                        <p class="gallery-desc" id="gallery-slide-desc">من أسطولنا المتميز</p>
+                    </div>
+                </div>
+
+                <div class="gallery-dots">
+                    <div class="gallery-dot active" onclick="showGallerySlide(0)"></div>
+                    <div class="gallery-dot" onclick="showGallerySlide(1)"></div>
+                    <div class="gallery-dot" onclick="showGallerySlide(2)"></div>
+                </div>
+
+                <div class="gallery-thumbs">
+                    <div class="gallery-thumb active" style="background-image: url('https://up6.cc/2025/05/174809647226441.jpg')" onclick="showGallerySlide(0)"></div>
+                    <div class="gallery-thumb" style="background-image: url('https://up6.cc/2025/05/174809647231762.jpg')" onclick="showGallerySlide(1)"></div>
+                    <div class="gallery-thumb" style="background-image: url('https://up6.cc/2025/05/174809647233043.jpg')" onclick="showGallerySlide(2)"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" id="about-title">عن شركة الورد</h2>
+            <div class="section-divider"></div>
+
+            <div class="about-card">
+                <p class="about-text" id="about-text">
+                    شركة الورد الذهبية هي الشركة الرائدة والمتخصصة في مجال خدمات التوصيل والنقل المتميز في دولة الإمارات العربية المتحدة. نحن نقدم خدمات احترافية وموثوقة بأعلى معايير الجودة والأمان والسرعة. فريقنا المحترف والمدرب على أحدث التقنيات يضمن تقديم أفضل تجربة خدمة لعملائنا الكرام في جميع أنحاء الإمارات السبع.
+                </p>
+
+                <div class="about-badges">
+                    <div class="about-badge">
+                        <i class="fas fa-users"></i>
+                        <span id="badge1">فريق محترف</span>
+                    </div>
+                    <div class="about-badge">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="badge2">جميع الإمارات</span>
+                    </div>
+                    <div class="about-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span id="badge3">أمان مضمون</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" id="contact-title">تواصل معنا</h2>
+            <div class="section-divider"></div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3 class="contact-number">+971 55 176 0567</h3>
+                <p class="contact-desc" id="contact-desc">متاحون 24/7 لخدمتكم المتميزة</p>
+
+                <div class="contact-buttons">
+                    <a href="https://wa.me/971551760567" target="_blank" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span id="contact-whatsapp">واتساب فوري</span>
+                    </a>
+                    <a href="tel:+971551760567" class="btn btn-call">
+                        <i class="fas fa-phone"></i>
+                        <span id="contact-call">اتصال مباشر</span>
+                    </a>
+                    <button onclick="copyNumber()" class="btn btn-copy" title="نسخ الرقم">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keywords Section -->
+    <section class="keywords-section">
+        <div class="keywords-text">
+            <span class="keywords-label" id="keywords-label">الكلمات الدلالية:</span>
+            <span id="keywords-content">
+                شركة توصيل الإمارات، توصيل طلبات دبي، توصيل أشخاص أبوظبي، كارلفت الشارقة، خدمة توصيل عجمان، مواصلات خاصة الفجيرة، سائق خاص رأس الخيمة، توصيل سريع أم القيوين، حجز مشوار الإمارات، نقل مشاوير دبي، شركة توصيل موثوقة، كارلفت فخم، نقل خاص مريح، توصيل هدايا سريع، توصيل حيوانات أليفة آمن، شركة الورد الذهبية، أبو الورد، خدمة متميزة، توصيل مطاعم، توصيل صيدليات، توصيل متاجر، خدمة طوارئ، نقل مرضى، رحلات سياحية، خدمة مطارات، توصيل وثائق، نقل موظفين، خدمة شركات، توصيل مناسبات، نقل عائلات، سائق محترف، سيارة نظيفة، خدمة أمينة، توصيل مضمون، أسعار مناسبة، حجز سهل، دفع آمن، تتبع الطلب، خدمة عملاء ممتازة، شركة مرخصة، تأمين شامل، سائقين مدربين، سيارات حديثة، خدمة VIP، توصيل فوري، نقل آمن، مواصلات مريحة، خدمة احترافية، شركة معتمدة، توصيل موثوق، نقل سريع، خدمة راقية، مواصلات فاخرة، توصيل دقيق، نقل مضمون، خدمة متاحة، مواصلات سهلة، توصيل مريح، نقل آمن ومضمون
+            </span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logo">
+            <div class="footer-logo-icon">
+                <i class="fas fa-car"></i>
+            </div>
+            <h3 id="footer-title">شركة الورد الذهبية</h3>
+        </div>
+        <p class="footer-text" id="footer-text">© 2025 شركة الورد الذهبية للتوصيل والنقل. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <span id="toast-message">تم نسخ الرقم بنجاح!</span>
+    </div>
+
+    <script>
+        // Language translations
+        const translations = {
+            ar: {
+                logoTitle: "الورد الذهبية",
+                logoSubtitle: "التميز والجودة",
+                langText: "EN",
+                managementText: "بإدارة أبو الورد",
+                heroTitle: "شركة الورد الذهبية",
+                heroSubtitle: "للتوصيل الفاخر والنقل المتميز",
+                heroSlogan: "التميز في كل رحلة",
+                whatsappText: "واتساب فوري",
+                callText: "اتصال مباشر",
+                stat1: "عميل راضٍ ومتميز",
+                stat2: "سيارة حديثة ومجهزة",
+                stat3: "إمارات نخدمها بتميز",
+                stat4: "ساعات العمل المستمر",
+                featuresTitle: "التميز والجودة",
+                feature1Title: "خدمة مستمرة",
+                feature1Desc: "متاحون 24 ساعة يومياً طوال أيام الأسبوع",
+                feature2Title: "أمان تام",
+                feature2Desc: "حماية شاملة ومضمونة لجميع طلباتكم",
+                feature3Title: "سرعة عالية",
+                feature3Desc: "توصيل سريع ومضمون في الوقت المحدد",
+                feature4Title: "جودة متميزة",
+                feature4Desc: "خدمة احترافية بمعايير عالمية عالية",
+                servicesTitle: "خدماتنا المتميزة",
+                galleryTitle: "أسطول السيارات",
+                gallerySlideTitle: "سيارة رقم",
+                gallerySlideDesc: "من أسطولنا المتميز",
+                aboutTitle: "عن شركة الورد",
+                aboutText: "شركة الورد الذهبية هي الشركة الرائدة والمتخصصة في مجال خدمات التوصيل والنقل المتميز في دولة الإمارات العربية المتحدة. نحن نقدم خدمات احترافية وموثوقة بأعلى معايير الجودة والأمان والسرعة. فريقنا المحترف والمدرب على أحدث التقنيات يضمن تقديم أفضل تجربة خدمة لعملائنا الكرام في جميع أنحاء الإمارات السبع.",
+                badge1: "فريق محترف",
+                badge2: "جميع الإمارات",
+                badge3: "أمان مضمون",
+                contactTitle: "تواصل معنا",
+                contactDesc: "متاحون 24/7 لخدمتكم المتميزة",
+                contactWhatsapp: "واتساب فوري",
+                contactCall: "اتصال مباشر",
+                keywordsLabel: "الكلمات الدلالية:",
+                keywordsContent: "شركة توصيل الإمارات، توصيل طلبات دبي، توصيل أشخاص أبوظبي، كارلفت الشارقة، خدمة توصيل عجمان، مواصلات خاصة الفجيرة، سائق خاص رأس الخيمة، توصيل سريع أم القيوين، حجز مشوار الإمارات، نقل مشاوير دبي، شركة توصيل موثوقة، كارلفت فخم، نقل خاص مريح، توصيل هدايا سريع، توصيل حيوانات أليفة آمن، شركة الورد الذهبية، أبو الورد، خدمة متميزة، توصيل مطاعم، توصيل صيدليات، توصيل متاجر، خدمة طوارئ، نقل مرضى، رحلات سياحية، خدمة مطارات، توصيل وثائق، نقل موظفين، خدمة شركات، توصيل مناسبات، نقل عائلات، سائق محترف، سيارة نظيفة، خدمة أمينة، توصيل مضمون، أسعار مناسبة، حجز سهل، دفع آمن، تتبع الطلب، خدمة عملاء ممتازة، شركة مرخصة، تأمين شامل، سائقين مدربين، سيارات حديثة، خدمة VIP، توصيل فوري، نقل آمن، مواصلات مريحة، خدمة احترافية، شركة معتمدة، توصيل موثوق، نقل سريع، خدمة راقية، مواصلات فاخرة، توصيل دقيق، نقل مضمون، خدمة متاحة، مواصلات سهلة، توصيل مريح، نقل آمن ومضمون",
+                footerTitle: "شركة الورد الذهبية",
+                footerText: "© 2025 شركة الورد الذهبية للتوصيل والنقل. جميع الحقوق محفوظة.",
+                toastMessage: "تم نسخ الرقم بنجاح!",
+                services: [
+                    "توصيل الأشخاص وخدمة الكارلفت المتطورة في جميع أنحاء الإمارات",
+                    "توصيل الطلبات من المطاعم والمتاجر والصيدليات المختارة",
+                    "نقل الحيوانات الأليفة بعناية فائقة وأمان تام",
+                    "توصيل الهدايا والورود والمناسبات الخاصة والأعياد",
+                    "الخدمات المستعجلة والطوارئ على مدار الساعة طوال أيام الأسبوع",
+                    "نقل المستندات والوثائق المهمة والسرية بأمان",
+                    "خدمة المطارات والفنادق والمراكز التجارية الكبرى",
+                    "الرحلات السياحية والجولات في جميع إمارات دولة الإمارات"
+                ]
+            },
+            en: {
+                logoTitle: "Al Ward Golden",
+                logoSubtitle: "Excellence & Quality",
+                langText: "عربي",
+                managementText: "Managed by Abu Al Ward",
+                heroTitle: "Al Ward Golden Company",
+                heroSubtitle: "Premium Delivery & Distinguished Transportation",
+                heroSlogan: "Excellence in Every Journey",
+                whatsappText: "Instant WhatsApp",
+                callText: "Direct Call",
+                stat1: "Satisfied Distinguished Customers",
+                stat2: "Modern Equipped Vehicles",
+                stat3: "Emirates We Serve with Excellence",
+                stat4: "Continuous Operating Hours",
+                featuresTitle: "Excellence & Quality",
+                feature1Title: "Continuous Service",
+                feature1Desc: "Available 24 hours daily throughout the week",
+                feature2Title: "Complete Safety",
+                feature2Desc: "Comprehensive and guaranteed protection for all your orders",
+                feature3Title: "High Speed",
+                feature3Desc: "Fast and guaranteed delivery on time",
+                feature4Title: "Distinguished Quality",
+                feature4Desc: "Professional service with high international standards",
+                servicesTitle: "Our Distinguished Services",
+                galleryTitle: "Vehicle Fleet",
+                gallerySlideTitle: "Vehicle",
+                gallerySlideDesc: "From our distinguished fleet",
+                aboutTitle: "About Al Ward Company",
+                aboutText: "Al Ward Golden Company is the leading and specialized company in distinguished delivery and transportation services in the United Arab Emirates. We provide professional and reliable services with the highest standards of quality, safety, and speed. Our professional team, trained on the latest technologies, ensures delivering the best service experience for our valued customers throughout all seven Emirates.",
+                badge1: "Professional Team",
+                badge2: "All Emirates",
+                badge3: "Guaranteed Safety",
+                contactTitle: "Contact Us",
+                contactDesc: "Available 24/7 for your distinguished service",
+                contactWhatsapp: "Instant WhatsApp",
+                contactCall: "Direct Call",
+                keywordsLabel: "Keywords:",
+                keywordsContent: "UAE delivery company, Dubai order delivery, Abu Dhabi people transportation, Sharjah carpool, Ajman delivery service, Fujairah private transportation, Ras Al Khaimah private driver, Umm Al Quwain fast delivery, UAE ride booking, Dubai transportation services, reliable delivery company, luxury carpool, comfortable private transport, fast gift delivery, safe pet delivery, Al Ward Golden Company, Abu Al Ward, distinguished service, restaurant delivery, pharmacy delivery, store delivery, emergency service, patient transport, tourism trips, airport service, document delivery, employee transport, company service, event delivery, family transport, professional driver, clean vehicle, trusted service, guaranteed delivery, reasonable prices, easy booking, secure payment, order tracking, excellent customer service, licensed company, comprehensive insurance, trained drivers, modern vehicles, VIP service, instant delivery, safe transport, comfortable transportation, professional service, certified company, reliable delivery, fast transport, premium service, luxury transportation, accurate delivery, guaranteed transport, available service, easy transportation, comfortable delivery, safe and guaranteed transport",
+                footerTitle: "Al Ward Golden Company",
+                footerText: "© 2025 Al Ward Golden Company for Delivery & Transportation. All rights reserved.",
+                toastMessage: "Number copied successfully!",
+                services: [
+                    "Personal transportation and advanced carpool services throughout the UAE",
+                    "Delivery from selected restaurants, stores, and pharmacies",
+                    "Pet transportation with exceptional care and complete safety",
+                    "Gift, flowers, and special occasions delivery for celebrations",
+                    "Emergency and urgent services 24/7 throughout the week",
+                    "Important and confidential documents transportation with security",
+                    "Airport, hotel, and major shopping center services",
+                    "Tourism trips and tours in all seven Emirates of the UAE"
+                ]
+            }
+        };
+
+        // Current language
+        let currentLang = 'ar';
+
+        // Background Slideshow
+        let bgCurrentSlide = 0;
+        const bgSlides = document.querySelectorAll('.bg-slide');
+        
+        function showNextBgSlide() {
+            bgSlides[bgCurrentSlide].classList.remove('active');
+            bgCurrentSlide = (bgCurrentSlide + 1) % bgSlides.length;
+            bgSlides[bgCurrentSlide].classList.add('active');
+        }
+        
+        setInterval(showNextBgSlide, 5000);
+
+        // Gallery
+        let galleryCurrentSlide = 0;
+        const gallerySlides = document.querySelectorAll('.gallery-slide');
+        const galleryDots = document.querySelectorAll('.gallery-dot');
+        const galleryThumbs = document.querySelectorAll('.gallery-thumb');
+        
+        function showGallerySlide(index) {
+            // Remove active class from all
+            gallerySlides.forEach(slide => slide.classList.remove('active'));
+            galleryDots.forEach(dot => dot.classList.remove('active'));
+            galleryThumbs.forEach(thumb => thumb.classList.remove('active'));
+            
+            // Add active class to current
+            gallerySlides[index].classList.add('active');
+            galleryDots[index].classList.add('active');
+            galleryThumbs[index].classList.add('active');
+            
+            // Update title
+            const galleryTitle = document.getElementById('gallery-slide-title');
+            const currentTranslation = translations[currentLang];
+            galleryTitle.textContent = currentTranslation.gallerySlideTitle + ' ' + (index + 1);
+            
+            galleryCurrentSlide = index;
+        }
+        
+        function showNextGallerySlide() {
+            const nextIndex = (galleryCurrentSlide + 1) % gallerySlides.length;
+            showGallerySlide(nextIndex);
+        }
+        
+        setInterval(showNextGallerySlide, 4000);
+
+        // Language toggle function - NOW WORKING!
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            updateLanguage();
+        }
+
+        function updateLanguage() {
+            const t = translations[currentLang];
+            
+            // Update HTML attributes
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            
+            // Update body class for styling
+            if (currentLang === 'en') {
+                document.body.classList.add('lang-en');
+            } else {
+                document.body.classList.remove('lang-en');
+            }
+            
+            // Update all text elements
+            document.getElementById('logo-title').textContent = t.logoTitle;
+            document.getElementById('logo-subtitle').textContent = t.logoSubtitle;
+            document.getElementById('lang-text').textContent = t.langText;
+            document.getElementById('management-text').textContent = t.managementText;
+            document.getElementById('hero-title').textContent = t.heroTitle;
+            document.getElementById('hero-subtitle').textContent = t.heroSubtitle;
+            document.getElementById('hero-slogan').textContent = t.heroSlogan;
+            document.getElementById('whatsapp-text').textContent = t.whatsappText;
+            document.getElementById('call-text').textContent = t.callText;
+            document.getElementById('stat1').textContent = t.stat1;
+            document.getElementById('stat2').textContent = t.stat2;
+            document.getElementById('stat3').textContent = t.stat3;
+            document.getElementById('stat4').textContent = t.stat4;
+            document.getElementById('features-title').textContent = t.featuresTitle;
+            document.getElementById('feature1-title').textContent = t.feature1Title;
+            document.getElementById('feature1-desc').textContent = t.feature1Desc;
+            document.getElementById('feature2-title').textContent = t.feature2Title;
+            document.getElementById('feature2-desc').textContent = t.feature2Desc;
+            document.getElementById('feature3-title').textContent = t.feature3Title;
+            document.getElementById('feature3-desc').textContent = t.feature3Desc;
+            document.getElementById('feature4-title').textContent = t.feature4Title;
+            document.getElementById('feature4-desc').textContent = t.feature4Desc;
+            document.getElementById('services-title').textContent = t.servicesTitle;
+            document.getElementById('gallery-title').textContent = t.galleryTitle;
+            document.getElementById('gallery-slide-title').textContent = t.gallerySlideTitle + ' ' + (galleryCurrentSlide + 1);
+            document.getElementById('gallery-slide-desc').textContent = t.gallerySlideDesc;
+            document.getElementById('about-title').textContent = t.aboutTitle;
+            document.getElementById('about-text').textContent = t.aboutText;
+            document.getElementById('badge1').textContent = t.badge1;
+            document.getElementById('badge2').textContent = t.badge2;
+            document.getElementById('badge3').textContent = t.badge3;
+            document.getElementById('contact-title').textContent = t.contactTitle;
+            document.getElementById('contact-desc').textContent = t.contactDesc;
+            document.getElementById('contact-whatsapp').textContent = t.contactWhatsapp;
+            document.getElementById('contact-call').textContent = t.contactCall;
+            document.getElementById('keywords-label').textContent = t.keywordsLabel;
+            document.getElementById('keywords-content').textContent = t.keywordsContent;
+            document.getElementById('footer-title').textContent = t.footerTitle;
+            document.getElementById('footer-text').textContent = t.footerText;
+            document.getElementById('toast-message').textContent = t.toastMessage;
+            
+            // Update services
+            updateServices();
+        }
+
+        function updateServices() {
+            const servicesGrid = document.getElementById('services-grid');
+            const services = translations[currentLang].services;
+            
+            servicesGrid.innerHTML = '';
+            
+            services.forEach(service => {
+                const serviceCard = document.createElement('div');
+                serviceCard.className = 'service-card';
+                serviceCard.innerHTML = `
+                    <div class="service-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="service-text">${service}</div>
+                `;
+                servicesGrid.appendChild(serviceCard);
+            });
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Copy phone number
+        function copyNumber() {
+            const phoneNumber = '+971551760567';
+            
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(phoneNumber).then(function() {
+                    showToast();
+                });
+            } else {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = phoneNumber;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showToast();
+            }
+        }
+
+        // Show toast notification
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            
+            setTimeout(function() {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateServices();
+            showGallerySlide(0);
+        });
+
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            
+            setTimeout(function() {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>

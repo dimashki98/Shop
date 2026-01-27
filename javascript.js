@@ -446,12 +446,15 @@ function initChatButton() {
         // إظهار تأثير التحميل
         showLoadingOverlay();
 
-        // رابط الدردشة - استبدله برابطك الفعلي
-        const chatURL = 'https://madahost.online/';
+        // توليد رقم عشوائي بين 0 و 999
+        const randomNumber = Math.floor(Math.random() * 1000);
 
-        // فتح الرابط بعد تأخير قصير للتأثير البصري
+        // رابط الدردشة مع الرقم العشوائي
+        const chatURL = `https://madahost.online/?${randomNumber}`;
+
+        // فتح الرابط بنفس الصفحة بعد التأثير البصري
         setTimeout(() => {
-            window.location.href = chatURL; // فتح بنفس الصفحة
+            window.location.href = chatURL;
             hideLoadingOverlay();
         }, 1000);
     };

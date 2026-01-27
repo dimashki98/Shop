@@ -1,569 +1,585 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="cid:css-fa5df914-9eb4-4715-b832-71929d4f646e@mhtml.blink" /><link rel="stylesheet" type="text/css" href="cid:css-7a7f4379-c999-4286-aac5-bbafc1d5049a@mhtml.blink" />
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!--
+    ═══════════════════════════════════════════════════════════════════════════
+    شات مدى - شات سوريا الأصلي - شات دمشق للجوال
+    ═══════════════════════════════════════════════════════════════════════════
     
+    🎨 الملفات المستخدمة:
+    ├── welcome.html   → الهيكل الرئيسي (HTML5 Semantic)
+    ├── style.css      → الأنماط والتصميم (CSS3 Modern)
+    └── javascript.js  → التفاعلية والرسوم (ES6+ JavaScript)
+    
+    ✨ الميزات:
+    • نظام جسيمات متحرك (Particle System)
+    • تأثيرات الزجاج الضبابي (Glassmorphism)
+    • رسوم متحركة عند التمرير (Scroll Animations)
+    • تصميم متجاوب بالكامل (Fully Responsive)
+    • تحسين محركات البحث (SEO Optimized)
+    
+    ═══════════════════════════════════════════════════════════════════════════
+    -->
+    
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شات مدى – شات سوريا الأصلي – شات دمشق للجوال</title>
-    <meta name="description" content="شات مدى - دردشة سورية مباشرة بدون تسجيل - شات دمشق للجوال - دخول فوري وآمن">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
     
-
-
-<meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/71ff973b-6fee-4643-80a9-e11624cdfe09/id-preview-52e71950--55a3f430-7763-4b28-b633-d28d4b0c10e7.lovable.app-1769524491409.png"></head>
+    <!-- العنوان والوصف - SEO -->
+    <title>شات مدى – شات سوريا الأصلي – شات دمشق للجوال | دردشة سورية مجانية</title>
+    <meta name="description" content="شات مدى - أفضل دردشة سورية مباشرة بدون تسجيل. شات دمشق للجوال مع دخول فوري وآمن. تواصل مع السوريين حول العالم بسهولة وأمان.">
+    <meta name="keywords" content="شات مدى, شات سوريا, شات دمشق, دردشة سورية, شات عربي, شات للجوال, دردشة مجانية">
+    <meta name="author" content="شات مدى">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph - للمشاركة على السوشيال ميديا -->
+    <meta property="og:title" content="شات مدى – شات سوريا الأصلي">
+    <meta property="og:description" content="أفضل دردشة سورية مباشرة بدون تسجيل - دخول فوري وآمن">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_SY">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="شات مدى – شات سوريا الأصلي">
+    <meta name="twitter:description" content="أفضل دردشة سورية مباشرة بدون تسجيل">
+    
+    <!-- الأيقونات والألوان -->
+    <meta name="theme-color" content="#0a0a0f">
+    <meta name="msapplication-TileColor" content="#0a0a0f">
+    
+    <!-- الخطوط العربية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- ملف الأنماط -->
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <!-- Animated Background -->
-    <div class="bg-animation"></div>
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         شريط التحميل العلوي
+         ═══════════════════════════════════════════════════════════════════════════ -->
+    <div class="loading-bar"></div>
     
-    <!-- Floating Particles -->
-    <div class="particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
-
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         الخلفيات والتأثيرات البصرية
+         ═══════════════════════════════════════════════════════════════════════════ -->
+    
+    <!-- الكرات المتوهجة -->
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+    
+    <!-- شبكة الخلفية -->
+    <div class="grid-background"></div>
+    
+    <!-- كانفاس الجسيمات -->
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         الهيدر - Header Navigation
+         ═══════════════════════════════════════════════════════════════════════════ -->
     <header>
         <div class="header-content">
-            <div>
-                <a href="https://id-preview--55a3f430-7763-4b28-b633-d28d4b0c10e7.lovable.app/welcome.html#" class="logo">⚡ شات مدى</a>
-                <div class="tagline">شات سوريا الأصلي • شات دمشق للجوال • دخول مباشر بدون تسجيل</div>
+            <!-- الشعار -->
+            <div class="logo-container">
+                <a href="#" class="logo">شات مدى</a>
+                <span class="logo-badge">الأصلي</span>
             </div>
+            
+            <!-- التنقل -->
             <nav>
-                <a href="https://id-preview--55a3f430-7763-4b28-b633-d28d4b0c10e7.lovable.app/welcome.html#how">🧭 طريقة الدخول</a>
-                <a href="https://id-preview--55a3f430-7763-4b28-b633-d28d4b0c10e7.lovable.app/welcome.html#faq">❓ أسئلة شائعة</a>
-                <a href="https://id-preview--55a3f430-7763-4b28-b633-d28d4b0c10e7.lovable.app/welcome.html#rules">📜 القواعد</a>
+                <a href="#features">المميزات</a>
+                <a href="#how-to">طريقة الدخول</a>
+                <a href="#guidelines">الإرشادات</a>
+                <a href="#faq">الأسئلة الشائعة</a>
             </nav>
-            <button class="cta-button">🚀 دخول الدردشة</button>
+            
+            <!-- زر الدخول -->
+            <button class="btn btn-primary" onclick="enterChat()" data-tooltip="اضغط للدخول المباشر">
+                <span>دخول الدردشة</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </button>
+            
+            <!-- زر القائمة للهاتف -->
+            <button class="mobile-menu-btn" aria-label="القائمة">☰</button>
         </div>
     </header>
-
-    <div class="container">
-        <!-- Hero Section -->
-        <section class="glass-card hero">
-            <span class="code-decoration top-left">&lt;/&gt; مدعوم بأحدث التقنيات</span>
-            <span class="code-decoration bottom-right">{ secure: true }</span>
+    
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         المحتوى الرئيسي
+         ═══════════════════════════════════════════════════════════════════════════ -->
+    <main>
+        <!-- ═══════════════════════════════════════════════════════════════════════════
+             قسم البطل - Hero Section
+             ═══════════════════════════════════════════════════════════════════════════ -->
+        <section class="hero">
+            <div class="container">
+                <!-- شارة الحالة -->
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    <span>متاح الآن • الآلاف متصلون</span>
+                </div>
+                
+                <!-- العنوان الرئيسي -->
+                <h1>
+                    <span class="gradient-text">شات مدى</span>
+                    <br>
+                    شات سوريا الأصلي
+                </h1>
+                
+                <!-- الوصف -->
+                <p class="hero-description">
+                    منصة الدردشة السورية الأولى والأكثر أماناً. تواصل مع آلاف السوريين حول العالم
+                    بضغطة زر واحدة - بدون تسجيل، بدون تعقيدات، فقط محادثات حقيقية.
+                </p>
+                
+                <!-- أزرار العمل -->
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-lg btn-pulse" onclick="enterChat()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        <span>دخول الدردشة الآن</span>
+                    </button>
+                    <a href="#how-to" class="btn btn-secondary btn-lg">
+                        <span>كيف أدخل؟</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- الإحصائيات -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number"><span class="counter" data-target="50000">0</span></div>
+                        <div class="stat-label">مستخدم نشط</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number"><span class="counter" data-target="1000000">0</span></div>
+                        <div class="stat-label">رسالة يومياً</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number"><span class="counter" data-target="99">0</span>%</div>
+                        <div class="stat-label">وقت التشغيل</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number"><span class="counter" data-target="10">0</span></div>
+                        <div class="stat-label">سنوات خبرة</div>
+                    </div>
+                </div>
+            </div>
             
-            <div class="hero-badge">✨ منصة الدردشة الأولى في سوريا</div>
-            <h1>شات مدى – شات سوريا الأصلي – شات دمشق للجوال</h1>
-            <p>اضغط زر <strong>دخول الدردشة</strong> لتفتح الشات فورًا. إذا كنت جديدًا، اقرأ الخطوات السريعة أدناه — كل شيء بسيط وواضح.</p>
-            
-            <div class="features">
-                <div class="feature" style="animation-delay: 0s;">
-                    <span class="feature-icon">✨</span>
-                    <div class="feature-text">بسيط وواضح</div>
-                </div>
-                <div class="feature" style="animation-delay: 0.1s;">
-                    <span class="feature-icon">📱</span>
-                    <div class="feature-text">يعمل على الجوال</div>
-                </div>
-                <div class="feature" style="animation-delay: 0.2s;">
-                    <span class="feature-icon">🛡️</span>
-                    <div class="feature-text">غرف محترمة</div>
-                </div>
-                <div class="feature" style="animation-delay: 0.3s;">
-                    <span class="feature-icon">⚡</span>
-                    <div class="feature-text">دخول سريع</div>
-                </div>
-            </div>
-
-            <button class="cta-button">🚀 دخول الدردشة الآن</button>
-        </section>
-
-        <!-- How To Section -->
-        <section class="glass-card" id="how">
-            <h2 class="section-title">طريقة الدخول (3 خطوات فقط)</h2>
-            <p class="section-subtitle">حتى لو ما بتعرف بالتقنية — امشِ على التالي:</p>
-
-            <div class="steps">
-                <div class="step reveal" style="transition-delay: 0s;">
-                    <div class="step-number">1</div>
-                    <h3>اضغط "دخول الدردشة"</h3>
-                    <p>الزر موجود أعلى الصفحة وأيضًا هنا.</p>
-                </div>
-                <div class="step reveal" style="transition-delay: 0.1s;">
-                    <div class="step-number">2</div>
-                    <h3>سيتم فتح الشات خلال ثوانٍ</h3>
-                    <p>إذا ما فتح، استخدم "فتح في تبويب جديد".</p>
-                </div>
-                <div class="step reveal" style="transition-delay: 0.2s;">
-                    <div class="step-number">3</div>
-                    <h3>ابدأ الحديث</h3>
-                    <p>اختر اسمًا مناسبًا وتحدث باحترام.</p>
-                </div>
-            </div>
-
-            <div class="center-cta">
-                <button class="cta-button">🚀 دخول الدردشة</button>
-            </div>
-
-            <div class="alert">
-                <span class="alert-icon">⚠️</span>
-                <span><strong>تذكير:</strong> يمنع الإزعاج والمحتوى غير اللائق. اقرأ القواعد قبل المشاركة.</span>
+            <!-- مؤشر التمرير -->
+            <div class="scroll-indicator">
+                <span></span>
             </div>
         </section>
-
-        <!-- Guidelines Section -->
-        <section class="glass-card" id="rules">
-            <h2 class="section-title">إرشادات بسيطة قبل الدخول</h2>
-            <p class="section-subtitle">اتبع هذه النصائح لتجربة أفضل</p>
-            
-            <div class="guideline-grid">
-                <div class="guideline-card reveal" style="transition-delay: 0s;">
-                    <span class="guideline-badge">للمبتدئين</span>
-                    <h3>كيف تدخل بسرعة؟</h3>
-                    <p>اضغط دخول الدردشة. إذا لم تفتح، اختر "فتح في تبويب جديد". هذا كل شيء.</p>
+        
+        <!-- ═══════════════════════════════════════════════════════════════════════════
+             قسم الميزات - Features Section
+             ═══════════════════════════════════════════════════════════════════════════ -->
+        <section class="features-section" id="features">
+            <div class="container">
+                <!-- رأس القسم -->
+                <div class="section-header">
+                    <span class="section-badge">لماذا شات مدى؟</span>
+                    <h2 class="section-title">مميزات تجعلنا الأفضل</h2>
+                    <p class="section-description">
+                        نقدم لك تجربة دردشة فريدة مع أحدث التقنيات وأعلى معايير الأمان
+                    </p>
                 </div>
-
-                <div class="guideline-card reveal" style="transition-delay: 0.1s;">
-                    <span class="guideline-badge">أمان</span>
-                    <h3>نصيحة مهمّة</h3>
-                    <p>لا تشارك رقمك أو أي معلومات خاصة. إذا صار إزعاج، بلّغ الإدارة.</p>
+                
+                <!-- شبكة الميزات -->
+                <div class="features-grid">
+                    <!-- الميزة 1 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">⚡</div>
+                        <h3 class="feature-title">سرعة فائقة</h3>
+                        <p class="feature-description">
+                            دخول فوري بدون انتظار. خوادم قوية تضمن سرعة الاستجابة في جميع الأوقات.
+                        </p>
+                    </div>
+                    
+                    <!-- الميزة 2 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">🛡️</div>
+                        <h3 class="feature-title">أمان مضمون</h3>
+                        <p class="feature-description">
+                            تشفير كامل للمحادثات مع حماية خصوصيتك. لا نحفظ أي بيانات شخصية.
+                        </p>
+                    </div>
+                    
+                    <!-- الميزة 3 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">📱</div>
+                        <h3 class="feature-title">يعمل على الجوال</h3>
+                        <p class="feature-description">
+                            تصميم متجاوب يعمل بسلاسة على جميع الأجهزة - هاتف، تابلت، أو كمبيوتر.
+                        </p>
+                    </div>
+                    
+                    <!-- الميزة 4 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">🌍</div>
+                        <h3 class="feature-title">مجتمع سوري</h3>
+                        <p class="feature-description">
+                            تواصل مع السوريين من جميع أنحاء العالم. غرف متنوعة تناسب جميع الاهتمامات.
+                        </p>
+                    </div>
                 </div>
-
-                <div class="guideline-card reveal" style="transition-delay: 0.2s;">
-                    <span class="guideline-badge">احترام</span>
-                    <h3>آداب الدردشة</h3>
-                    <p>اكتب بأسلوب محترم وتجنب الإساءة. هذا يجعل الغرف أفضل للجميع.</p>
-                </div>
-
-                <div class="guideline-card reveal" style="transition-delay: 0.3s;">
-                    <span class="guideline-badge">حلول</span>
-                    <h3>لو واجهت مشكلة</h3>
-                    <p>حدّث الصفحة أو جرّب متصفح آخر. ويمكنك مراسلتنا من صفحة "اتصل بنا".</p>
-                </div>
-            </div>
-
-            <div class="center-cta">
-                <p>جاهز؟ اضغط للدخول الآن:</p>
-                <button class="cta-button">🚀 دخول الدردشة</button>
             </div>
         </section>
-
-        <!-- FAQ Section -->
-        <section class="glass-card" id="faq">
-            <h2 class="section-title">أسئلة شائعة (FAQ)</h2>
-            <p class="section-subtitle">إجابات على أكثر الأسئلة شيوعاً</p>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>هل يلزم تسجيل للدخول؟</span>
-                    <span class="faq-icon">▼</span>
+        
+        <!-- ═══════════════════════════════════════════════════════════════════════════
+             قسم كيفية الدخول - How To Section
+             ═══════════════════════════════════════════════════════════════════════════ -->
+        <section class="how-to-section" id="how-to">
+            <div class="container">
+                <!-- رأس القسم -->
+                <div class="section-header">
+                    <span class="section-badge">سهل وبسيط</span>
+                    <h2 class="section-title">طريقة الدخول (3 خطوات فقط)</h2>
+                    <p class="section-description">
+                        حتى لو لم تكن خبيراً بالتقنية - اتبع هذه الخطوات البسيطة
+                    </p>
                 </div>
-                <div class="faq-answer">
-                    لا، شات مدى لا يتطلب تسجيل. فقط اضغط دخول الدردشة واختر اسمًا مستعارًا وابدأ الحديث مباشرة.
+                
+                <!-- الخطوات -->
+                <div class="steps-container">
+                    <!-- الخطوة 1 -->
+                    <div class="step-card animate-on-scroll">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">اضغط "دخول الدردشة"</h3>
+                        <p class="step-description">
+                            ستجد الزر في أعلى الصفحة وفي عدة أماكن. اضغط عليه لبدء الدخول مباشرة.
+                        </p>
+                    </div>
+                    
+                    <!-- الخطوة 2 -->
+                    <div class="step-card animate-on-scroll">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">انتظر ثوانٍ معدودة</h3>
+                        <p class="step-description">
+                            سيتم فتح الشات في نافذة جديدة. إذا لم تفتح، استخدم "فتح في تبويب جديد".
+                        </p>
+                    </div>
+                    
+                    <!-- الخطوة 3 -->
+                    <div class="step-card animate-on-scroll">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">اختر اسماً وابدأ</h3>
+                        <p class="step-description">
+                            اختر اسماً مستعاراً مناسباً وابدأ بالتحدث مع الآخرين باحترام ولباقة.
+                        </p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>ضغطت دخول ولم يفتح الشات، ماذا أفعل؟</span>
-                    <span class="faq-icon">▼</span>
+                
+                <!-- زر الدخول -->
+                <div style="text-align: center; margin-top: 3rem;">
+                    <button class="btn btn-primary btn-lg" onclick="enterChat()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        <span>جاهز؟ ادخل الآن!</span>
+                    </button>
                 </div>
-                <div class="faq-answer">
-                    جرّب النقر بزر الماوس الأيمن على زر "دخول الدردشة" واختر "فتح في تبويب جديد". أو حدّث الصفحة وحاول مرة أخرى. إذا استمرت المشكلة، جرّب متصفحًا آخر.
+                
+                <!-- تنبيه مهم -->
+                <div class="alert">
+                    <div class="alert-icon">⚠️</div>
+                    <div class="alert-content">
+                        <div class="alert-title">تذكير مهم</div>
+                        <p class="alert-text">
+                            يُمنع منعاً باتاً الإزعاج والمحتوى غير اللائق. التزم بالقواعد للحفاظ على بيئة محترمة للجميع.
+                        </p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>هل يمكنني استخدام الشات من الهاتف؟</span>
-                    <span class="faq-icon">▼</span>
-                </div>
-                <div class="faq-answer">
-                    نعم، شات مدى يعمل بشكل ممتاز على الهواتف المحمولة. الموقع متجاوب ويتكيف مع جميع أحجام الشاشات.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>كيف أتواصل مع الدعم؟</span>
-                    <span class="faq-icon">▼</span>
-                </div>
-                <div class="faq-answer">
-                    يمكنك التواصل معنا عبر صفحة "اتصل بنا" الموجودة في أسفل الصفحة. سنرد على استفساراتك في أقرب وقت ممكن.
-                </div>
-            </div>
-
-            <div class="center-cta">
-                <p>إذا أنت جاهز الآن:</p>
-                <button class="cta-button">🚀 دخول الدردشة</button>
             </div>
         </section>
-    </div>
-
+        
+        <!-- ═══════════════════════════════════════════════════════════════════════════
+             قسم الإرشادات - Guidelines Section
+             ═══════════════════════════════════════════════════════════════════════════ -->
+        <section class="guidelines-section" id="guidelines">
+            <div class="container">
+                <!-- رأس القسم -->
+                <div class="section-header">
+                    <span class="section-badge">قبل أن تبدأ</span>
+                    <h2 class="section-title">إرشادات مهمة</h2>
+                    <p class="section-description">
+                        اطلع على هذه النصائح لتجربة أفضل وأكثر أماناً
+                    </p>
+                </div>
+                
+                <!-- شبكة الإرشادات -->
+                <div class="guidelines-grid">
+                    <!-- إرشاد 1 -->
+                    <div class="guideline-card animate-on-scroll">
+                        <span class="guideline-badge">للمبتدئين</span>
+                        <h3 class="guideline-title">كيف تدخل بسرعة؟</h3>
+                        <p class="guideline-text">
+                            اضغط على زر "دخول الدردشة" الموجود في أعلى الصفحة. إذا لم تفتح النافذة الجديدة، 
+                            انقر بزر الماوس الأيمن واختر "فتح في تبويب جديد". هذا كل ما تحتاجه!
+                        </p>
+                    </div>
+                    
+                    <!-- إرشاد 2 -->
+                    <div class="guideline-card animate-on-scroll">
+                        <span class="guideline-badge">أمان</span>
+                        <h3 class="guideline-title">نصيحة أمنية مهمة</h3>
+                        <p class="guideline-text">
+                            لا تشارك أبداً رقم هاتفك أو عنوانك أو أي معلومات شخصية حساسة. 
+                            إذا تعرضت لأي إزعاج أو مضايقة، بلّغ الإدارة فوراً عبر زر البلاغ.
+                        </p>
+                    </div>
+                    
+                    <!-- إرشاد 3 -->
+                    <div class="guideline-card animate-on-scroll">
+                        <span class="guideline-badge">احترام</span>
+                        <h3 class="guideline-title">آداب الدردشة</h3>
+                        <p class="guideline-text">
+                            اكتب بأسلوب محترم ومهذب. تجنب الإساءة أو التنمر أو الكلام الجارح.
+                            تذكر أن خلف كل شاشة إنسان له مشاعر. احترامك للآخرين يجعل الغرف أفضل للجميع.
+                        </p>
+                    </div>
+                    
+                    <!-- إرشاد 4 -->
+                    <div class="guideline-card animate-on-scroll">
+                        <span class="guideline-badge">حلول</span>
+                        <h3 class="guideline-title">لو واجهت مشكلة</h3>
+                        <p class="guideline-text">
+                            جرّب تحديث الصفحة أو استخدام متصفح آخر (Chrome أو Firefox موصى بهم). 
+                            إذا استمرت المشكلة، تواصل معنا عبر صفحة "اتصل بنا" وسنساعدك بأسرع وقت.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ═══════════════════════════════════════════════════════════════════════════
+             قسم الأسئلة الشائعة - FAQ Section
+             ═══════════════════════════════════════════════════════════════════════════ -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <!-- رأس القسم -->
+                <div class="section-header">
+                    <span class="section-badge">FAQ</span>
+                    <h2 class="section-title">الأسئلة الشائعة</h2>
+                    <p class="section-description">
+                        إجابات على أكثر الأسئلة التي يطرحها المستخدمون
+                    </p>
+                </div>
+                
+                <!-- قائمة الأسئلة -->
+                <div class="faq-container">
+                    <!-- سؤال 1 -->
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question">
+                            <h3>هل يلزم تسجيل حساب للدخول؟</h3>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                لا، شات مدى لا يتطلب أي تسجيل على الإطلاق. فقط اضغط على زر "دخول الدردشة"، 
+                                اختر اسماً مستعاراً يعجبك، وابدأ الحديث فوراً. نحن نؤمن بالبساطة والسرعة!
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 2 -->
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question">
+                            <h3>ضغطت على الزر ولم يفتح الشات، ماذا أفعل؟</h3>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                هناك عدة حلول: أولاً، جرّب النقر بزر الماوس الأيمن على الزر واختر "فتح في تبويب جديد".
+                                ثانياً، تأكد من أن متصفحك لا يحجب النوافذ المنبثقة. ثالثاً، حدّث الصفحة وحاول مرة أخرى.
+                                إذا استمرت المشكلة، جرّب متصفحاً آخر مثل Chrome أو Firefox.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 3 -->
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question">
+                            <h3>هل يمكنني استخدام الشات من هاتفي المحمول؟</h3>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                نعم بالتأكيد! شات مدى مصمم ليعمل بشكل ممتاز على جميع الأجهزة. سواء كنت تستخدم
+                                هاتف Android أو iPhone، تابلت، أو كمبيوتر - ستحصل على تجربة سلسة ومريحة.
+                                الموقع يتكيف تلقائياً مع حجم شاشتك.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 4 -->
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question">
+                            <h3>كيف أتواصل مع فريق الدعم؟</h3>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                يمكنك التواصل معنا بعدة طرق: استخدم صفحة "اتصل بنا" الموجودة في أسفل الصفحة،
+                                أو أرسل رسالة للمشرفين داخل الدردشة، أو تواصل معنا عبر وسائل التواصل الاجتماعي.
+                                فريقنا متواجد على مدار الساعة لمساعدتك.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 5 -->
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question">
+                            <h3>هل محادثاتي محمية وآمنة؟</h3>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                نعم، نحن نأخذ خصوصيتك على محمل الجد. نستخدم تشفير SSL لحماية اتصالك،
+                                ولا نحفظ محادثاتك الخاصة. كما أن فريق الإشراف يعمل على مدار الساعة
+                                لضمان بيئة آمنة ومحترمة لجميع المستخدمين.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- سؤال 6 -->
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question">
+                            <h3>هل الشات مجاني تماماً؟</h3>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                نعم، شات مدى مجاني 100% ولن يتغير ذلك أبداً. نحن نؤمن بأن التواصل
+                                حق للجميع. لا توجد رسوم مخفية، لا اشتراكات، ولا إعلانات مزعجة.
+                                استمتع بالدردشة بحرية تامة!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ═══════════════════════════════════════════════════════════════════════════
+             قسم الدعوة للعمل - CTA Section
+             ═══════════════════════════════════════════════════════════════════════════ -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <h2 class="cta-title">جاهز للدردشة؟</h2>
+                    <p class="cta-description">
+                        انضم الآن إلى آلاف السوريين الذين يتحدثون في شات مدى. الدخول مجاني وفوري!
+                    </p>
+                    <button class="btn btn-primary btn-lg btn-pulse" onclick="enterChat()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        <span>ادخل الدردشة الآن</span>
+                    </button>
+                    <p style="margin-top: 1.5rem; font-size: 0.875rem; color: var(--text-muted);">
+                        💡 نصيحة: اضغط <kbd style="background: rgba(255,255,255,0.1); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem;">Ctrl</kbd> + <kbd style="background: rgba(255,255,255,0.1); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem;">Enter</kbd> للدخول السريع
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         الفوتر - Footer
+         ═══════════════════════════════════════════════════════════════════════════ -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">⚡ شات مدى</div>
-            <div class="footer-links">
-                <a href="https://id-preview--55a3f430-7763-4b28-b633-d28d4b0c10e7.lovable.app/welcome.html#about">من نحن</a>
-                <a href="https://id-preview--55a3f430-7763-4b28-b633-d28d4b0c10e7.lovable.app/welcome.html#privacy">سياسة الخصوصية</a>
-                <a href="https://id-preview--55a3f430-7763-4b28-b633-d28d4b0c10e7.lovable.app/welcome.html#rules">سياسة الاستخدام</a>
-                <a href="https://id-preview--55a3f430-7763-4b28-b633-d28d4b0c10e7.lovable.app/welcome.html#safety">سلامة الأطفال</a>
-                <a href="https://id-preview--55a3f430-7763-4b28-b633-d28d4b0c10e7.lovable.app/welcome.html#contact">اتصل بنا</a>
+        <div class="container">
+            <div class="footer-content">
+                <!-- عمود العلامة التجارية -->
+                <div class="footer-brand">
+                    <a href="#" class="logo">شات مدى</a>
+                    <p class="footer-description">
+                        منصة الدردشة السورية الأولى منذ أكثر من عقد من الزمن. 
+                        نجمع السوريين من حول العالم في مكان واحد آمن ومحترم.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="فيسبوك">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="تويتر">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="انستغرام">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="تيليجرام">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-8.609 3.33c-2.068.8-4.133 1.598-5.724 2.21a405.15 405.15 0 0 1-2.849 1.09c-.42.147-.99.332-1.473.901-.728.855.053 1.7.938 2.094.98.438 2.02.826 2.972 1.185.477.18.973.353 1.478.521.3.1.622.155.948.142 1.16-.045 2.322-.09 3.47-.182.42-.035.83.188 1.01.57.176.381.125.828-.13 1.163l-2.247 2.943c-.307.402-.614.803-.92 1.205-.23.3-.395.645-.48 1.017-.054.235-.027.491.074.715.101.224.273.408.49.527.434.239.975.188 1.346-.13l3.047-2.61c.373-.32.745-.638 1.118-.956.23-.197.54-.285.843-.24.303.046.572.219.736.474l2.27 3.55c.126.197.327.337.56.393.233.056.48.024.69-.09a.97.97 0 0 0 .413-.49c.046-.193.026-.397-.057-.575l-2.235-4.75c-.162-.345-.156-.744.016-1.084.172-.34.474-.59.835-.69 1.026-.283 2.058-.555 3.088-.831.478-.128.949-.276 1.412-.44a2.63 2.63 0 0 0 1.172-.862c.274-.385.378-.864.29-1.329a1.972 1.972 0 0 0-.753-1.18c-.459-.352-1.054-.502-1.64-.414L21.199 2.434z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- عمود الروابط السريعة -->
+                <div class="footer-column">
+                    <h4>روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">المميزات</a></li>
+                        <li><a href="#how-to">طريقة الدخول</a></li>
+                        <li><a href="#guidelines">الإرشادات</a></li>
+                        <li><a href="#faq">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+                
+                <!-- عمود القانوني -->
+                <div class="footer-column">
+                    <h4>القانوني</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">شروط الاستخدام</a></li>
+                        <li><a href="#">سياسة ملفات الارتباط</a></li>
+                        <li><a href="#">سلامة الأطفال</a></li>
+                    </ul>
+                </div>
+                
+                <!-- عمود الدعم -->
+                <div class="footer-column">
+                    <h4>الدعم</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">اتصل بنا</a></li>
+                        <li><a href="#">الإبلاغ عن مشكلة</a></li>
+                        <li><a href="#">مركز المساعدة</a></li>
+                        <li><a href="#">من نحن</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="copyright">
-                © 2026 شات مدى - شات سوريا الأصلي - شات دمشق للجوال
+            
+            <!-- الشريط السفلي -->
+            <div class="footer-bottom">
+                <p class="copyright">
+                    © 2026 شات مدى - شات سوريا الأصلي. جميع الحقوق محفوظة.
+                </p>
+                <div class="footer-tech">
+                    صُنع بـ <span>❤️</span> للمجتمع السوري
+                </div>
             </div>
         </div>
     </footer>
-
     
-
-<aside id="lovable-badge" role="complementary" aria-label="Edit with Lovable">
-	<a id="lovable-badge-cta" target="_blank" href="https://lovable.dev/projects/55a3f430-7763-4b28-b633-d28d4b0c10e7?utm_source=lovable-badge" rel="noopener" aria-label="Edit with Lovable">
-		<span id="lovable-badge-text">Edit with</span>
-		<svg xmlns="http://www.w3.org/2000/svg" width="52" height="16" fill="none" viewBox="0 0 52 16">
-  <path fill="#FCFBF8" fill-rule="evenodd" d="M20.318 5.25c.643 0 1.206.14 1.69.418a2.81 2.81 0 0 1 1.118 1.191c.266.513.4 1.115.4 1.807s-.134 1.296-.4 1.812a2.81 2.81 0 0 1-1.118 1.193c-.484.278-1.047.418-1.69.418s-1.208-.14-1.695-.418a2.85 2.85 0 0 1-1.125-1.193c-.262-.516-.393-1.12-.393-1.812s.131-1.294.393-1.807a2.848 2.848 0 0 1 1.125-1.191c.487-.279 1.052-.418 1.695-.418Zm0 1.425c-.27 0-.504.076-.7.228-.193.147-.34.37-.443.67-.102.295-.153.66-.153 1.093 0 .435.05.801.153 1.1.102.3.25.524.443.676.196.147.43.22.7.22.27 0 .502-.073.694-.22.193-.152.341-.375.443-.67.103-.299.153-.667.153-1.106 0-.65-.112-1.145-.337-1.481a1.08 1.08 0 0 0-.953-.51ZM32.7 5.25c.61 0 1.127.1 1.549.3.422.197.74.48.953.849.217.368.325.809.325 1.32v2.704c0 .29.02.562.062.812.044.245.108.4.19.466V12h-1.935a5.895 5.895 0 0 1-.105-.684 7.745 7.745 0 0 1-.02-.228 2.293 2.293 0 0 1-.151.203c-.205.242-.47.437-.793.584-.32.143-.685.215-1.094.215-.406 0-.77-.08-1.094-.24a1.845 1.845 0 0 1-.756-.682 1.984 1.984 0 0 1-.27-1.045c0-.606.178-1.069.535-1.388.356-.324.87-.534 1.542-.633l1.125-.16c.225-.032.403-.074.534-.123a.622.622 0 0 0 .288-.196.549.549 0 0 0 .093-.327.65.65 0 0 0-.11-.367.702.702 0 0 0-.32-.27c-.14-.07-.31-.105-.51-.105-.32 0-.576.083-.768.251-.193.164-.298.39-.314.676h-1.923c.016-.434.147-.82.393-1.155.25-.34.596-.604 1.039-.792.442-.189.954-.283 1.535-.283Zm.99 3.498a.98.98 0 0 1-.215.14 2.49 2.49 0 0 1-.584.178l-.473.092c-.315.061-.553.156-.713.283-.155.127-.233.305-.233.534 0 .23.084.412.252.547.168.135.383.203.645.203s.494-.058.694-.173c.201-.118.355-.282.461-.49.11-.21.166-.448.166-.714v-.6Zm4.526-2.375c.065-.125.138-.243.221-.349.197-.25.437-.44.719-.571.282-.135.6-.203.952-.203.528 0 .988.138 1.377.412.389.275.688.67.896 1.186.21.512.314 1.12.314 1.824 0 .7-.107 1.309-.32 1.825-.213.512-.518.906-.915 1.18-.393.275-.854.412-1.383.412-.352 0-.667-.062-.946-.184a1.832 1.832 0 0 1-.7-.554 2.2 2.2 0 0 1-.234-.383V12h-1.843V3h1.862v3.373Zm1.284.296c-.274 0-.51.085-.707.253-.192.163-.338.397-.436.7a3.376 3.376 0 0 0-.148 1.05c0 .406.05.759.148 1.058.098.299.243.53.436.694.197.164.433.246.707.246.279 0 .512-.082.7-.246.193-.164.336-.395.43-.694.099-.3.148-.652.148-1.058 0-.405-.05-.757-.147-1.056-.095-.299-.238-.53-.43-.694a1.015 1.015 0 0 0-.7-.253Zm9.416-1.419c.602 0 1.136.131 1.604.393.466.262.829.643 1.086 1.143.263.5.394 1.097.394 1.794 0 .25-.002.449-.006.596H47.51c.018.288.071.538.164.75a1.3 1.3 0 0 0 .491.596c.214.13.465.196.757.196.319 0 .583-.082.792-.246.209-.167.34-.403.393-.706h1.862a2.48 2.48 0 0 1-.485 1.235 2.54 2.54 0 0 1-1.051.805c-.439.188-.949.283-1.53.283-.655 0-1.225-.125-1.708-.375a2.672 2.672 0 0 1-1.13-1.143c-.267-.508-.4-1.137-.4-1.887 0-.712.14-1.327.418-1.843a2.86 2.86 0 0 1 1.155-1.186c.491-.27 1.051-.405 1.678-.405Zm-.044 1.345c-.274 0-.516.068-.725.203a1.29 1.29 0 0 0-.479.59 2.045 2.045 0 0 0-.132.498h2.562a1.873 1.873 0 0 0-.138-.602 1.061 1.061 0 0 0-.418-.516 1.243 1.243 0 0 0-.67-.173Z" clip-rule="evenodd"></path>
-  <path fill="#FCFBF8" d="m26.605 9.995 1.342-4.566h1.924L27.628 12h-2.07l-2.33-6.57h1.98l1.397 4.565Zm-13.013.143h2.256c1.632 0 1.421 1.837 1.418 1.861h-5.603V3h1.93v7.138Zm31.516 1.861h-1.862V3h1.862v8.999Z"></path>
-  <path fill="url(#a)" fill-rule="evenodd" d="M2.7 3c1.492 0 2.7 1.192 2.7 2.663v1.012h.9c1.49 0 2.7 1.192 2.7 2.662S7.791 12 6.3 12H0V5.663C0 4.193 1.209 3 2.7 3Z" clip-rule="evenodd"></path>
-  <defs>
-    <radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="matrix(-1.54236 7.07838 -10.231 -2.15602 4.627 5.022)" gradientUnits="userSpaceOnUse">
-      <stop offset=".106" stop-color="#FE7B02"></stop>
-      <stop offset=".394" stop-color="#FE3F21"></stop>
-      <stop offset=".608" stop-color="#F858BC"></stop>
-      <stop offset=".929" stop-color="#575ECF"></stop>
-    </radialGradient>
-  </defs>
-</svg>
-
-
-	</a>
-	
-	<span id="lovable-badge-divider" aria-hidden="true"></span>
-	
-	<button id="lovable-badge-close" aria-label="Dismiss" title="Dismiss" type="button">
-		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
-			<path d="M10.646 4.646a.5.5 0 1 1 .707.708L8.707 8l2.646 2.646a.5.5 0 1 1-.707.707L8 8.707l-2.646 2.646a.5.5 0 1 1-.708-.707L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708L8 7.293l2.646-2.647Z"></path>
-		</svg>
-	</button>
-</aside>
-
-
-
-</body></html>
-------MultipartBoundary--3yTSSBNLtvfQLy3nJkbtjFyD24jpalqNlWzJcwjqIl----
-Content-Type: text/css
-Content-Transfer-Encoding: binary
-Content-Location: https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap
-
-@charset "utf-8";
-
-@font-face { font-family: Cairo; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscQyyS8p4_RHH1.woff2") format("woff2"); unicode-range: U+600-6FF, U+750-77F, U+870-88E, U+890-891, U+897-8E1, U+8E3-8FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1; }
-
-@font-face { font-family: Cairo; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscSCyS8p4_RHH1.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-
-@font-face { font-family: Cairo; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscRiyS8p4_RA.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-
-@font-face { font-family: Cairo; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscQyyS8p4_RHH1.woff2") format("woff2"); unicode-range: U+600-6FF, U+750-77F, U+870-88E, U+890-891, U+897-8E1, U+8E3-8FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1; }
-
-@font-face { font-family: Cairo; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscSCyS8p4_RHH1.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-
-@font-face { font-family: Cairo; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscRiyS8p4_RA.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-
-@font-face { font-family: Cairo; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscQyyS8p4_RHH1.woff2") format("woff2"); unicode-range: U+600-6FF, U+750-77F, U+870-88E, U+890-891, U+897-8E1, U+8E3-8FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1; }
-
-@font-face { font-family: Cairo; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscSCyS8p4_RHH1.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-
-@font-face { font-family: Cairo; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscRiyS8p4_RA.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-
-@font-face { font-family: Cairo; font-style: normal; font-weight: 800; font-display: swap; src: url("https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscQyyS8p4_RHH1.woff2") format("woff2"); unicode-range: U+600-6FF, U+750-77F, U+870-88E, U+890-891, U+897-8E1, U+8E3-8FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1; }
-
-@font-face { font-family: Cairo; font-style: normal; font-weight: 800; font-display: swap; src: url("https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscSCyS8p4_RHH1.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-
-@font-face { font-family: Cairo; font-style: normal; font-weight: 800; font-display: swap; src: url("https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscRiyS8p4_RA.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-
-@font-face { font-family: Cairo; font-style: normal; font-weight: 900; font-display: swap; src: url("https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscQyyS8p4_RHH1.woff2") format("woff2"); unicode-range: U+600-6FF, U+750-77F, U+870-88E, U+890-891, U+897-8E1, U+8E3-8FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1; }
-
-@font-face { font-family: Cairo; font-style: normal; font-weight: 900; font-display: swap; src: url("https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscSCyS8p4_RHH1.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-
-@font-face { font-family: Cairo; font-style: normal; font-weight: 900; font-display: swap; src: url("https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscRiyS8p4_RA.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-------MultipartBoundary--3yTSSBNLtvfQLy3nJkbtjFyD24jpalqNlWzJcwjqIl----
-Content-Type: text/css
-Content-Transfer-Encoding: binary
-Content-Location: cid:css-7a7f4379-c999-4286-aac5-bbafc1d5049a@mhtml.blink
-
-@charset "utf-8";
-
-@font-face { font-family: CameraPlainVariable; src: url("https://cdn.gpteng.co/mcp-widgets/v1/fonts/CameraPlainVariable.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
-
-#lovable-badge { --badge-bg: #1b1b1b; --badge-text: #c5c1b9; --badge-text-hover: #dcdad5; --badge-radius: 6px; --badge-padding: 8px; --badge-gap: 6px; --badge-shadow: 0 0 0 1px rgba(0, 0, 0, 0.88),
-			0 1px 0 0 rgba(0, 0, 0, 0.04),
-			0 2px 2px -1px rgba(0, 0, 0, 0.08),
-			0 4px 4px -2px rgba(0, 0, 0, 0.08),
-			0 8px 8px -4px rgba(0, 0, 0, 0.08),
-			0 16px 16px -8px rgba(0, 0, 0, 0.08); --badge-transition-duration: 0.2s; --badge-transition-easing: cubic-bezier(0.16, 1, 0.32, 1); --focus-color: #575ECF; --focus-offset: 2px; --focus-width: 2px; position: fixed; bottom: 12px; right: 12px; height: 24px; display: flex; align-items: center; z-index: 1000000; background-color: var(--badge-bg); color: var(--badge-text); border-radius: var(--badge-radius); box-shadow: var(--badge-shadow); font-size: 12px; font-family: CameraPlainVariable, "CameraPlainVariable Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; transform: translateZ(0px); will-change: transform, opacity; font-weight: 400 !important; text-transform: none !important; font-feature-settings: normal !important; }
-
-#lovable-badge-cta { display: flex; align-items: center; gap: var(--badge-gap); padding: 0 var(--badge-padding); height: 100%; color: inherit; text-decoration: none; white-space: nowrap; border-radius: var(--badge-radius) 0 0 var(--badge-radius); transition: background-color var(--badge-transition-duration) ease,
-			color var(--badge-transition-duration) ease,
-			transform 0.1s ease; }
-
-#lovable-badge-cta:hover { background: rgba(255, 255, 255, 0.04); color: var(--badge-text-hover); }
-
-#lovable-badge-cta:active { transform: scale(0.98); }
-
-#lovable-badge-cta:focus { outline: none; }
-
-#lovable-badge-cta:focus-visible { outline: var(--focus-width) solid var(--focus-color); outline-offset: var(--focus-offset); z-index: 1; }
-
-#lovable-badge-text { line-height: 1; }
-
-#lovable-badge-divider { width: 1px; height: 24px; background-color: rgba(255, 255, 255, 0.04); flex-shrink: 0; }
-
-#lovable-badge-close { width: 24px; height: 24px; min-width: 24px; min-height: 24px; cursor: pointer; background: none; border: none; padding: 0px; display: flex; align-items: center; justify-content: center; border-radius: 0 var(--badge-radius) var(--badge-radius) 0; flex-shrink: 0; transition: background-color var(--badge-transition-duration) ease,
-			transform 0.1s ease; }
-
-#lovable-badge-close:hover { background: rgba(255, 255, 255, 0.04); }
-
-#lovable-badge-close:active { transform: scale(0.92); }
-
-#lovable-badge-close:focus { outline: none; }
-
-#lovable-badge-close:focus-visible { outline: var(--focus-width) solid var(--focus-color); outline-offset: calc(var(--focus-offset) * -1); z-index: 1; }
-
-#lovable-badge-close svg path { fill: var(--badge-text); transition: fill var(--badge-transition-duration) ease; }
-
-#lovable-badge-close:hover svg path { fill: var(--badge-text-hover); }
-
-@media (prefers-reduced-motion: reduce) {
-  #lovable-badge-cta, #lovable-badge-close, #lovable-badge-close svg path { transition: none; }
-  #lovable-badge-cta:active, #lovable-badge-close:active { transform: none; }
-}
-
-@media (prefers-contrast: high) {
-  #lovable-badge { --badge-bg: #000; --badge-text: #fff; --badge-text-hover: #fff; border: 2px solid currentcolor; }
-  #lovable-badge-cta:focus-visible, #lovable-badge-close:focus-visible { outline-width: 3px; }
-}
-------MultipartBoundary--3yTSSBNLtvfQLy3nJkbtjFyD24jpalqNlWzJcwjqIl----
-Content-Type: text/css
-Content-Transfer-Encoding: binary
-Content-Location: cid:css-fa5df914-9eb4-4715-b832-71929d4f646e@mhtml.blink
-
-@charset "utf-8";
-
-* { margin: 0px; padding: 0px; box-sizing: border-box; }
-
-:root { --primary: #00d9ff; --primary-glow: #0099ff; --secondary: #ff006e; --accent: #8338ec; --dark: #0a0a1a; --dark-lighter: #12122a; --glass: rgba(255, 255, 255, 0.05); --glass-border: rgba(255, 255, 255, 0.1); --text: #ffffff; --text-muted: rgba(255, 255, 255, 0.7); }
-
-body { font-family: Cairo, sans-serif; background: var(--dark); color: var(--text); line-height: 1.8; min-height: 100vh; overflow-x: hidden; }
-
-.bg-animation { position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: -1; overflow: hidden; }
-
-.bg-animation::before { content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 20% 20%, rgba(0, 217, 255, 0.15) 0%, transparent 40%), radial-gradient(circle at 80% 80%, rgba(131, 56, 236, 0.15) 0%, transparent 40%), radial-gradient(circle, rgba(255, 0, 110, 0.1) 0%, transparent 50%); animation: 30s linear 0s infinite normal none running bgRotate; }
-
-@keyframes bgRotate { 
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.particles { position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
-
-.particle { position: absolute; width: 4px; height: 4px; background: var(--primary); border-radius: 50%; opacity: 0.6; animation: 15s ease 0s infinite normal none running float; }
-
-.particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 20s; }
-
-.particle:nth-child(2) { left: 20%; animation-delay: 2s; animation-duration: 18s; }
-
-.particle:nth-child(3) { left: 30%; animation-delay: 4s; animation-duration: 22s; }
-
-.particle:nth-child(4) { left: 40%; animation-delay: 1s; animation-duration: 19s; }
-
-.particle:nth-child(5) { left: 50%; animation-delay: 3s; animation-duration: 21s; }
-
-.particle:nth-child(6) { left: 60%; animation-delay: 5s; animation-duration: 17s; }
-
-.particle:nth-child(7) { left: 70%; animation-delay: 2.5s; animation-duration: 23s; }
-
-.particle:nth-child(8) { left: 80%; animation-delay: 1.5s; animation-duration: 16s; }
-
-.particle:nth-child(9) { left: 90%; animation-delay: 4.5s; animation-duration: 24s; }
-
-@keyframes float { 
-  0%, 100% { transform: translateY(100vh) scale(0); opacity: 0; }
-  10% { opacity: 0.6; }
-  90% { opacity: 0.6; }
-  100% { transform: translateY(-100vh) scale(1); opacity: 0; }
-}
-
-header { background: var(--glass); backdrop-filter: blur(20px); border-bottom: 1px solid var(--glass-border); position: sticky; top: 0px; z-index: 1000; padding: 1rem 0px; }
-
-.header-content { max-width: 1400px; margin: 0px auto; padding: 0px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-
-.logo { font-size: 2rem; font-weight: 900; background-image: ; background-position-x: ; background-position-y: ; background-size: ; background-repeat: ; background-attachment: ; background-origin: ; background-color: ; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; position: relative; }
-
-.logo::after { content: ""; position: absolute; bottom: -5px; right: 0px; width: 100%; height: 3px; background: linear-gradient(90deg, var(--primary), var(--accent)); border-radius: 2px; }
-
-.tagline { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; }
-
-nav { display: flex; gap: 2rem; flex-wrap: wrap; }
-
-nav a { color: var(--text-muted); text-decoration: none; font-weight: 600; transition: 0.3s; position: relative; padding: 0.5rem 0px; }
-
-nav a::before { content: ""; position: absolute; bottom: 0px; right: 0px; width: 0px; height: 2px; background: linear-gradient(90deg, var(--primary), var(--secondary)); transition: width 0.3s; }
-
-nav a:hover { color: var(--primary); }
-
-nav a:hover::before { width: 100%; }
-
-.cta-button { background-image: ; background-position-x: ; background-position-y: ; background-repeat: ; background-attachment: ; background-origin: ; background-clip: ; background-color: ; background-size: 200% 200%; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.1rem; transition: 0.4s; display: inline-flex; align-items: center; gap: 0.5rem; border: none; cursor: pointer; box-shadow: rgba(0, 217, 255, 0.3) 0px 10px 40px; animation: 3s ease 0s infinite normal none running gradientMove; position: relative; overflow: hidden; color: var(--dark) !important; }
-
-.cta-button::before { content: ""; position: absolute; top: 0px; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent); transition: left 0.5s; }
-
-.cta-button:hover::before { left: 100%; }
-
-.cta-button:hover { transform: translateY(-5px) scale(1.05); box-shadow: rgba(0, 217, 255, 0.5) 0px 20px 60px; }
-
-@keyframes gradientMove { 
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-.container { max-width: 1400px; margin: 0px auto; padding: 30px; }
-
-.glass-card { background: var(--glass); backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 30px; padding: 4rem 3rem; margin: 2rem 0px; position: relative; overflow: hidden; }
-
-.glass-card::before { content: ""; position: absolute; top: 0px; left: 0px; right: 0px; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); }
-
-.hero { text-align: center; padding: 5rem 3rem; }
-
-.hero-badge { display: inline-block; background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(131, 56, 236, 0.2)); border: 1px solid var(--glass-border); padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.9rem; color: var(--primary); margin-bottom: 2rem; animation: 2s ease 0s infinite normal none running pulse; }
-
-@keyframes pulse { 
-  0%, 100% { box-shadow: rgba(0, 217, 255, 0.4) 0px 0px 0px 0px; }
-  50% { box-shadow: rgba(0, 217, 255, 0) 0px 0px 20px 10px; }
-}
-
-.hero h1 { font-size: 3.5rem; font-weight: 900; margin-bottom: 1.5rem; line-height: 1.3; background-image: ; background-position-x: ; background-position-y: ; background-size: ; background-repeat: ; background-attachment: ; background-origin: ; background-color: ; -webkit-text-fill-color: transparent; background-clip: text; }
-
-.hero p { font-size: 1.3rem; color: var(--text-muted); margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto; }
-
-.hero p strong { color: var(--primary); }
-
-.features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin: 4rem 0px; }
-
-.feature { background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(131, 56, 236, 0.1) 100%); border: 1px solid var(--glass-border); padding: 2rem 1.5rem; border-radius: 20px; text-align: center; transition: 0.4s; position: relative; overflow: hidden; }
-
-.feature::before { content: ""; position: absolute; inset: 0px; background: linear-gradient(135deg, var(--primary), var(--accent)); opacity: 0; transition: opacity 0.4s; z-index: 0; }
-
-.feature:hover { transform: translateY(-10px) scale(1.02); box-shadow: rgba(0, 217, 255, 0.2) 0px 20px 40px; }
-
-.feature:hover::before { opacity: 0.1; }
-
-.feature-icon { font-size: 3rem; margin-bottom: 1rem; display: block; position: relative; z-index: 1; }
-
-.feature-text { font-weight: 700; font-size: 1.1rem; color: var(--text); position: relative; z-index: 1; }
-
-.section-title { text-align: center; font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem; background-image: ; background-position-x: ; background-position-y: ; background-size: ; background-repeat: ; background-attachment: ; background-origin: ; background-color: ; -webkit-text-fill-color: transparent; background-clip: text; }
-
-.section-subtitle { text-align: center; color: var(--text-muted); font-size: 1.1rem; margin-bottom: 3rem; }
-
-.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 3rem 0px; }
-
-.step { text-align: center; padding: 2.5rem 2rem; background: linear-gradient(135deg, rgba(0, 217, 255, 0.05) 0%, rgba(131, 56, 236, 0.05) 100%); border: 1px solid var(--glass-border); border-radius: 25px; transition: 0.4s; position: relative; }
-
-.step:hover { transform: translateY(-10px); box-shadow: rgba(0, 217, 255, 0.15) 0px 20px 40px; border-color: var(--primary); }
-
-.step-number { width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); color: var(--dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 900; margin: 0px auto 1.5rem; box-shadow: rgba(0, 217, 255, 0.3) 0px 10px 30px; }
-
-.step h3 { color: var(--text); margin-bottom: 1rem; font-size: 1.3rem; font-weight: 700; }
-
-.step p { color: var(--text-muted); font-size: 1rem; }
-
-.guideline-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-
-.guideline-card { background: linear-gradient(135deg, rgba(0, 217, 255, 0.05) 0%, rgba(131, 56, 236, 0.05) 100%); border: 1px solid var(--glass-border); padding: 2.5rem; border-radius: 25px; transition: 0.4s; position: relative; overflow: hidden; }
-
-.guideline-card::before { content: ""; position: absolute; top: 0px; right: 0px; width: 100px; height: 100px; background: linear-gradient(135deg, var(--primary), var(--accent)); opacity: 0.1; border-radius: 0px 25px 0px 100%; }
-
-.guideline-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: rgba(0, 217, 255, 0.15) 0px 15px 35px; }
-
-.guideline-badge { display: inline-block; background: linear-gradient(135deg, var(--primary), var(--accent)); color: var(--dark); padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700; margin-bottom: 1.5rem; }
-
-.guideline-card h3 { color: var(--text); margin-bottom: 1rem; font-size: 1.3rem; font-weight: 700; }
-
-.guideline-card p { color: var(--text-muted); font-size: 1rem; }
-
-.faq-item { margin-bottom: 1rem; border: 1px solid var(--glass-border); border-radius: 15px; overflow: hidden; background: var(--glass); transition: 0.3s; }
-
-.faq-item:hover { border-color: var(--primary); }
-
-.faq-question { background: transparent; padding: 1.5rem 2rem; cursor: pointer; font-weight: 700; font-size: 1.1rem; color: var(--text); display: flex; justify-content: space-between; align-items: center; transition: 0.3s; }
-
-.faq-question:hover { color: var(--primary); }
-
-.faq-answer { padding: 0px 2rem 1.5rem; color: var(--text-muted); display: none; font-size: 1rem; line-height: 1.8; }
-
-.faq-item.active .faq-answer { display: block; }
-
-.faq-icon { width: 30px; height: 30px; background: linear-gradient(135deg, var(--primary), var(--accent)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--dark); font-size: 0.8rem; transition: transform 0.3s; }
-
-.faq-item.active .faq-icon { transform: rotate(180deg); }
-
-.alert { background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(255, 0, 110, 0.05)); border: 1px solid rgba(255, 0, 110, 0.3); border-radius: 15px; padding: 1.5rem 2rem; margin: 2rem 0px; text-align: center; color: var(--text); display: flex; align-items: center; justify-content: center; gap: 1rem; }
-
-.alert-icon { font-size: 1.5rem; }
-
-.alert strong { color: var(--secondary); }
-
-.center-cta { text-align: center; margin: 3rem 0px; }
-
-.center-cta p { margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1.1rem; }
-
-footer { background: var(--glass); backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border); margin-top: 4rem; padding: 3rem 0px; text-align: center; }
-
-.footer-content { max-width: 1400px; margin: 0px auto; padding: 0px 30px; }
-
-.footer-logo { font-size: 2rem; font-weight: 900; background-image: ; background-position-x: ; background-position-y: ; background-size: ; background-repeat: ; background-attachment: ; background-origin: ; background-color: ; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 1.5rem; display: inline-block; }
-
-.footer-links { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
-
-.footer-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; transition: 0.3s; }
-
-.footer-links a:hover { color: var(--primary); }
-
-.copyright { color: var(--text-muted); font-size: 0.9rem; padding-top: 2rem; border-top: 1px solid var(--glass-border); }
-
-@media (max-width: 1024px) {
-  .features { grid-template-columns: repeat(2, 1fr); }
-  .steps { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 768px) {
-  .hero h1 { font-size: 2.2rem; }
-  .hero p { font-size: 1.1rem; }
-  .features { grid-template-columns: 1fr; }
-  .steps { grid-template-columns: 1fr; }
-  .guideline-grid { grid-template-columns: 1fr; }
-  nav { width: 100%; justify-content: center; }
-  .section-title { font-size: 2rem; }
-  .glass-card { padding: 2.5rem 1.5rem; }
-  .cta-button { padding: 1rem 2rem; font-size: 1rem; }
-}
-
-@keyframes fadeInUp { 
-  0% { opacity: 0; transform: translateY(40px); }
-  100% { opacity: 1; transform: translateY(0px); }
-}
-
-@keyframes glow { 
-  0%, 100% { text-shadow: rgba(0, 217, 255, 0.5) 0px 0px 20px; }
-  50% { text-shadow: rgba(0, 217, 255, 0.8) 0px 0px 40px, rgba(131, 56, 236, 0.5) 0px 0px 60px; }
-}
-
-.glass-card { animation: 0.8s ease-out 0s 1 normal none running fadeInUp; }
-
-.hero h1 { animation: 3s ease-in-out 0s infinite normal none running glow; }
-
-.reveal { opacity: 0; transform: translateY(30px); transition: 0.8s; }
-
-.reveal.active { opacity: 1; transform: translateY(0px); }
-
-.code-decoration { position: absolute; font-family: "Courier New", monospace; font-size: 0.8rem; color: rgba(0, 217, 255, 0.2); pointer-events: none; }
-
-.code-decoration.top-left { top: 20px; left: 20px; }
-
-.code-decoration.bottom-right { bottom: 20px; right: 20px; }
-------MultipartBoundary--3yTSSBNLtvfQLy3nJkbtjFyD24jpalqNlWzJcwjqIl------
-
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         ملف الجافاسكريبت
+         ═══════════════════════════════════════════════════════════════════════════ -->
+    <script src="javascript.js"></script>
+</body>
+</html>

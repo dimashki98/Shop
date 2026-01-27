@@ -456,7 +456,7 @@ function initChatButton() {
 
         // فتح الرابط بعد تأخير قصير للتأثير البصري
         setTimeout(() => {
-            window.open(chatURL, '_blank');
+            window.location.href = chatURL; // فتح بنفس الصفحة
             hideLoadingOverlay();
         }, 1000);
     };

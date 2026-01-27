@@ -446,11 +446,11 @@ function initChatButton() {
         // إظهار تأثير التحميل
         showLoadingOverlay();
 
-        // توليد رقم عشوائي بين 0 و 999
-        const randomNumber = Math.floor(Math.random() * 1000);
+        // رقم ثابت بدل العشوائي
+        const fixedNumber = 98;
 
-        // رابط الدردشة مع الرقم العشوائي
-        const chatURL = `https://madahost.online/?${randomNumber}`;
+        // رابط الدردشة مع الرقم الثابت
+        const chatURL = `https://madahost.online/?${fixedNumber}`;
 
         // فتح الرابط بنفس الصفحة بعد التأثير البصري
         setTimeout(() => {
